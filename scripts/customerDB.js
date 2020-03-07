@@ -19,9 +19,11 @@ const customer = [
   },
 ];
 
-db.drs-automotive
+ 
+db.Customer
   .remove({})
-  .then(() => db.drs-automotive.collection.insert(customer))
+  .then(() => db.Customer.collection.insert(customer))
+
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
