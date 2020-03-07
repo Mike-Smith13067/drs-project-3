@@ -1,18 +1,23 @@
+ 
 const crypto = require ('crypto');
 
+ 
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const customerSchema = new Schema({
   name: { type: String, required: true },
+ 
   hashed_password: {type: String, required: "Password is required"},
   salt: String, updated: Date, created: {type: Date, default: Date.now},
+ 
   make: { type: String, required: true },
   model: {type: String, required: true },
   vin: String,
   mileage: String,
   lastSereviceDate: { type: Date, default: Date.now },
   notes: String
+
 })
 
 customerSchema
@@ -54,6 +59,10 @@ customerSchema.methods = {
     return Math.round((new Date().valueOf() * Math.random())) + ''
   }
 }
+
+});
+
+
 const Customer = mongoose.model("Customer", customerSchema);
 
 module.exports = Customer;
