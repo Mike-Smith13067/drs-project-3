@@ -8,24 +8,18 @@ mongoose.connect(
   "mongodb://localhost/drs-automotive"
 );
 
-const customer = [
+const inventory_item = [
   {
-    name: "Mike Smith",
-    make: "Jeep",
-    model:"2006 Wrangler X",
-    vin: "xxxxx",
-    service: new Date(Date.now()),
-    notes: "asf"
+    name: "Oil 10/40",
+    max: "5",
+    min: "1",
+    notes: "asdf"
   },
 ];
 
- 
-db.Customer
-
-db.Customer.collection.insert(customer)
-db.Customer.collection.insert(customer))
-
-.then(data => {
+db.Inventory
+ db.Inventory.collection.insert(inventory_item)
+  .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
   })
