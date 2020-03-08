@@ -3,14 +3,17 @@ const Schema = mongoose.Schema;
 
 const adminSchema = new Schema({
   name: { type: String, required: true },
+ 
   hashed_password: {type: String, required: "Password is required"},
   salt: String, updated: Date, created: {type: Date, default: Date.now},
+ 
   make: { type: String, required: true },
   model: {type: String, required: true },
   vin: String,
   mileage: String,
   lastSereviceDate: { type: Date, default: Date.now },
   notes: String
+ 
 })
 
 adminSchema
@@ -53,6 +56,9 @@ adminSchema.methods = {
   }
 }
 
+ 
+});
+ 
 
 const Admin = mongoose.model("Admin", adminSchema);
 

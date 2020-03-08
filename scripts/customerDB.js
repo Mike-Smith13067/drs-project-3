@@ -19,9 +19,13 @@ const customer = [
   },
 ];
 
+ 
 db.Customer
+
 db.Customer.collection.insert(customer)
-  .then(data => {
+db.Customer.collection.insert(customer))
+
+.then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
   })
