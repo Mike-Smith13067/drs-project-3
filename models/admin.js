@@ -54,10 +54,7 @@ adminSchema.methods = {
   makeSalt: function() {
     return Math.round((new Date().valueOf() * Math.random())) + ''
   }
-}
-
- 
-});
+};
  
 
 const Admin = mongoose.model("Admin", adminSchema);

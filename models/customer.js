@@ -58,9 +58,7 @@ customerSchema.methods = {
   makeSalt: function() {
     return Math.round((new Date().valueOf() * Math.random())) + ''
   }
-}
-
-});
+};
 
 
 const Customer = mongoose.model("Customer", customerSchema);
