@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import NavTabs from "./Navbar";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import Customer from "./pages/Customer";
 import Inventory from "./pages/Inventory";
 import Contact from "./pages/Contact";
