@@ -71,7 +71,7 @@ class Home extends Component {
 
         <div className="slider">
           <div className="slide current">
-            <a href="https://flyclipart.com/automotive-mechanic-car-repair-retro-auto-repair-clip-art-517846" title="Automotive Mechanic Car Repair Retro - Auto Repair Clip Art"><img src="/images/drs-logo.png" width="95%" /></a>
+            {/* <a href="https://flyclipart.com/automotive-mechanic-car-repair-retro-auto-repair-clip-art-517846" title="Automotive Mechanic Car Repair Retro - Auto Repair Clip Art"><img src="/images/drs-logo.png" width="95%" /></a> */}
           </div>
           <div className="slide">
             <div className="content">
@@ -116,7 +116,6 @@ class Home extends Component {
         </div>
 
       </div>
-
 
 
 
