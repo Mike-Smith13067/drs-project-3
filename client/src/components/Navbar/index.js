@@ -50,6 +50,17 @@ function NavTabs(props) {
         </a>
         </button>
       </li>
+      <li className="nav-item">
+      <button type="button" className="btn btn-primary">
+        <a
+          href="#about"
+          onClick={() => props.handlePageChange("About")}
+          className={props.currentPage === "Contact" ? "nav-link active" : "nav-link"}
+        >
+          About
+        </a>
+        </button>
+      </li>
     </ul>
   );
 }
