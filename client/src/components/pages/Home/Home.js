@@ -1,69 +1,7 @@
 import React, { Component } from "react";
 
 class Home extends Component {
-  componentDidMount() {
-    const slides = document.querySelectorAll('.slide');
-    const next = document.querySelector('#next');
-    const prev = document.querySelector('#prev');
-    const auto = true; // Auto scroll
-    const intervalTime = 11000;
-    let slideInterval;
 
-    const nextSlide = () => {
-      // Get current class
-      const current = document.querySelector('.current');
-      // Remove current class
-      current.classList.remove('current');
-      // Check for next slide
-      if (current.nextElementSibling) {
-        // Add current to next sibling
-        current.nextElementSibling.classList.add('current');
-      } else {
-        // Add current to start
-        slides[0].classList.add('current');
-      }
-      setTimeout(() => current.classList.remove('current'));
-    };
-
-    const prevSlide = () => {
-      // Get current class
-      const current = document.querySelector('.current');
-      // Remove current class
-      current.classList.remove('current');
-      // Check for prev slide
-      if (current.previousElementSibling) {
-        // Add current to prev sibling
-        current.previousElementSibling.classList.add('current');
-      } else {
-        // Add current to last
-        slides[slides.length - 1].classList.add('current');
-      }
-      setTimeout(() => current.classList.remove('current'));
-    };
-
-    // Button events
-    next.addEventListener('click', e => {
-      nextSlide();
-      if (auto) {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, intervalTime);
-      }
-    });
-
-    prev.addEventListener('click', e => {
-      prevSlide();
-      if (auto) {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, intervalTime);
-      }
-    });
-
-    // Auto slide
-    if (auto) {
-      // Run next slide at interval time
-      slideInterval = setInterval(nextSlide, intervalTime);
-    }
-  }
   render() {
     return (
       <div>
@@ -71,7 +9,7 @@ class Home extends Component {
 
         <div className="slider">
           <div className="slide current">
-            {/* <a href="https://flyclipart.com/automotive-mechanic-car-repair-retro-auto-repair-clip-art-517846" title="Automotive Mechanic Car Repair Retro - Auto Repair Clip Art"><img src="/images/drs-logo.png" width="95%" /></a> */}
+            <a href="https://flyclipart.com/automotive-mechanic-car-repair-retro-auto-repair-clip-art-517846" title="Automotive Mechanic Car Repair Retro - Auto Repair Clip Art"><img src="/images/drs-logo.png" width="95%" alt = "drs-logo"/></a>
           </div>
           <div className="slide">
             <div className="content">
@@ -115,17 +53,6 @@ class Home extends Component {
           <button id="next"><i className="fas fa-arrow-right"></i></button>
         </div>
 
-      </div>
-
-
-
-    )
-
-
+      </div>)}
   }
-
-
-
-
-}
 export default Home;

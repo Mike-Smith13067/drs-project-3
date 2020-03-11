@@ -7,7 +7,7 @@ function NavTabs(props) {
   return (
     <ul className="nav nav-tabs">
       <li className="nav-item">
-      <button type="button" class="btn btn-primary">
+      <button type="button" className="btn btn-primary">
         <a
           href="#home"
           onClick={() => props.handlePageChange("Home")}
@@ -18,7 +18,7 @@ function NavTabs(props) {
       </button>
       </li>
       <li className="nav-item">
-      <button type="button" class="btn btn-primary">
+      <button type="button" className="btn btn-primary">
         <a
           href="#customer"
           onClick={() => props.handlePageChange("Customer")}
@@ -29,7 +29,7 @@ function NavTabs(props) {
         </button>
       </li>
       <li className="nav-item">
-      <button type="button" class="btn btn-primary">
+      <button type="button" className="btn btn-primary">
         <a
           href="#Inventory"
           onClick={() => props.handlePageChange("Inventory")}
@@ -40,7 +40,7 @@ function NavTabs(props) {
         </button>
       </li>
       <li className="nav-item">
-      <button type="button" class="btn btn-primary">
+      <button type="button" className="btn btn-primary">
         <a
           href="#contact"
           onClick={() => props.handlePageChange("Contact")}

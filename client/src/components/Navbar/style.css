@@ -1,0 +1,15 @@
+.nav-item {
+    width: 25%;
+    background-color: black;
+    color: red;
+    float: left;
+
+}
+.btn-primary {
+    background-color: grey
+
+}
+
+.nav-link {
+    color: white;
+}
