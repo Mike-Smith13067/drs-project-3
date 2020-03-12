@@ -77,7 +77,13 @@ class Home extends Component {
           <div className="slide">
             <div className="content">
               <h2>About DRS Automotive</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              <p>Wayne is the owner and manager of DRS Automotive LLC. Originally from Texas, he has lived in Colorado since elementary school and worked on cars since he bought his first one as a teenager. Owning his own shop has always been a dream of his since he started working in the automotive industry 20+ years ago. Wayne is ASE certified and enjoys diagnosing tough problems. He is also passionate about providing outstanding customer service from start to finish. In his spare time he is restoring a 1947 Willys Jeep.</p>
+            </div>
+          </div>
+          <div className="slide">
+            <div className="content">
+              <h2>Mission Statement</h2>
+              <p>To deliver quality automotive diagnostics and solutions while also providing outstanding customer service.</p>
             </div>
           </div>
           <div className="slide">
