@@ -18,9 +18,12 @@ class Home extends Component {
         counter =1
       }
 
+
       var image = `../../../images/image${counter}.jpg`;
       var currentImage = document.getElementById("current-image");
       currentImage.setAttribute("src", image);
+
+
       console.log(image);
     };
 
