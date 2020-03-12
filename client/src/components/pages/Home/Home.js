@@ -10,19 +10,12 @@ class Home extends Component {
     let slideInterval;
 
     const nextSlide = () => {
-      // Get current class
-      const current = document.querySelector('.current');
-      // Remove current class
-      current.classList.remove('current');
-      // Check for next slide
-      if (current.nextElementSibling) {
-        // Add current to next sibling
-        current.nextElementSibling.classList.add('current');
-      } else {
-        // Add current to start
-        slides[0].classList.add('current');
+      counter++
+      if(counter >= 8) {
+        counter =1
       }
-      setTimeout(() => current.classList.remove('current'));
+      var image = `../../../public/images/${counter}.jpg`;
+      console.log(image);
     };
 
     const prevSlide = () => {

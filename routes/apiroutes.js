@@ -45,7 +45,7 @@ function apiroutes(app) {
     // Admin routes
 
     app.get("/api/admin", function(req, res) {
-        db.Admin.find({_id: req.params.id}).then(function(data) {
+        db.Admin.find({}).then(function(data) {
            res.json(data)
         }).catch(function(err){
             res.json(err);
@@ -53,8 +53,8 @@ function apiroutes(app) {
        
     });
     
-    app.get("/api/admin/:id", function(req, res) {
-        db.Admin.findOne({_id: req.params.id}).then(function(data) {
+    app.get("/api/admin", function(req, res) {
+        db.Admin.find({_id: req.params.id}).then(function(data) {
            res.json(data)
         }).catch(function(err){
             res.json(err);
