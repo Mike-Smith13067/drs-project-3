@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// import test from "../../../images"
 
 class Home extends Component {
   componentDidMount() {
@@ -7,14 +8,19 @@ class Home extends Component {
     const prev = document.querySelector('#prev');
     const auto = true; // Auto scroll
     const intervalTime = 11000;
+    let counter = 1;
     let slideInterval;
+    
 
     const nextSlide = () => {
       counter++
       if(counter >= 8) {
         counter =1
       }
-      var image = `../../../public/images/${counter}.jpg`;
+
+      var image = `../../../images/image${counter}.jpg`;
+      var currentImage = document.getElementById("current-image");
+      currentImage.setAttribute("src", image);
       console.log(image);
     };
 
@@ -65,7 +71,7 @@ class Home extends Component {
 
         <div className="slider">
           <div className="slide current">
-            <a href="https://flyclipart.com/automotive-mechanic-car-repair-retro-auto-repair-clip-art-517846" title="Automotive Mechanic Car Repair Retro - Auto Repair Clip Art"><img src="/images/drs-logo.png" width="95%" alt="drs-logo" /></a>
+            <a href="https://flyclipart.com/automotive-mechanic-car-repair-retro-auto-repair-clip-art-517846" title="Automotive Mechanic Car Repair Retro - Auto Repair Clip Art"><img src="/images/drs-logo.png" width="95%" alt="drs-logo" id = "current-image"/></a>
           </div>
           <div className="slide">
             <div className="content">
