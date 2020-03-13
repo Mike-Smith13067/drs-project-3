@@ -14,4 +14,4 @@ const workOrderSchema = new Schema({
 
 const WorkOrder= mongoose.model("WorkOrder", workOrderSchema);
 
-module.exports = WorkOrder;
+export default WorkOrder;

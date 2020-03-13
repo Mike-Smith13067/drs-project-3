@@ -3,6 +3,7 @@ import NavTabs from "./Navbar";
 import Home from "./pages/Home/Home";
 import Customer from "./pages/Customer";
 import Inventory from "./pages/Inventory";
+import About from "./pages/Home/About";
 import Contact from "./pages/Contact";
 
 class HomePage extends Component {
@@ -21,6 +22,8 @@ class HomePage extends Component {
       return <Customer />;
     } else if (this.state.currentPage === "Inventory") {
       return <Inventory />;
+    } else if (this.state.currentPage === "About") {
+      return <About />;
     } else {
       return <Contact />;
     }

@@ -1,44 +1,27 @@
 import React, { Component } from "react";
+import Card from "../../Card/Card";
 
-class Admin extends Component {
+const missionStatement = "To deliver quality automotive diagnostics and solutions while also providing outstanding customer service."
+const bio = "Wayne is the owner and manager of DRS Automotive LLC. Originally from Texas, he has lived in Colorado since elementary school and worked on cars since he bought his first one as a teenager. Owning his own shop has always been a dream of his since he started working in the automotive industry 20+ years ago. Wayne is ASE certified and enjoys diagnosing tough problems. He is also passionate about providing outstanding customer service from start to finish. In his spare time he is restoring a 1947 Willys Jeep."
+const casey = "Head of security"
+const church = "Co-supervisor and Pest Control"
+const snook = "Co-supervisor and Pest Control"
+
+class About extends Component {
   componentDidMount() {}
     render() {
       return (
-        <table className="table">
-    <thead>
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Make</th>
-        <th scope="col">Model</th>
-        <th scope="col">Vin</th>
-        <th scope="col">Service</th>
-        <th scope="col">Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
+        <div className="container">
+          <Card text={missionStatement} />
+          <Card text ={bio} />
+          <Card text ={casey} />
+          <Card text ={church} />
+          <Card text ={snook} />
+        </div>
       ) 
       
     }
    
   
   }
+  export default About;
