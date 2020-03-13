@@ -1,0 +1,9 @@
+.card-body {
+
+    background-color: lightgray;
+}
+
+.col-sm {
+    possition: relative;
+    width: 20%;
+}

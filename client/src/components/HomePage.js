@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import NavTabs from "./Navbar";
 import Home from "./pages/Home/Home";
-import Customer from "./pages/Customer";
-import Inventory from "./pages/Inventory";
-import About from "./pages/Home/About";
+import Customer from "./pages/Customer/Customer";
+import Inventory from "./pages/Inventory/Inventory";
+import About from "./pages/About/About";
 import Contact from "./pages/Contact";
 
 class HomePage extends Component {
