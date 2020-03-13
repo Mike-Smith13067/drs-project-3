@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import test from "../../../images"
+// import test from ./images"
 
 class Home extends Component {
   componentDidMount() {
@@ -8,23 +8,25 @@ class Home extends Component {
     const prev = document.querySelector('#prev');
     const auto = true; // Auto scroll
     const intervalTime = 11000;
-    let counter = 1;
+    let counter = 0;
     let slideInterval;
     
 
     const nextSlide = () => {
       counter++
       if(counter >= 8) {
-        counter =1
+        counter =0
+
       }
 
 
-      var image = `../../../images/image${counter}.jpg`;
-      var currentImage = document.getElementById("current-image");
-      currentImage.setAttribute("src", image);
+      // var image = `../images/image${counter}.jpg`;
+      // var currentImage = document.getElementById("current-image");
+      // currentImage.setAttribute("src", image);
 
 
-      console.log(image);
+
+      // return image;
     };
 
     const prevSlide = () => {
@@ -67,14 +69,14 @@ class Home extends Component {
     }
   }
 
+
   render() {
+
     return (
       <div>
-
-
         <div className="slider">
           <div className="slide current">
-            <a href="https://flyclipart.com/automotive-mechanic-car-repair-retro-auto-repair-clip-art-517846" title="Automotive Mechanic Car Repair Retro - Auto Repair Clip Art"><img src="/images/drs-logo.png" width="95%" alt="drs-logo" id = "current-image"/></a>
+          <a href="https://flyclipart.com/automotive-mechanic-car-repair-retro-auto-repair-clip-art-517846" title="Automotive Mechanic Car Repair Retro - Auto Repair Clip Art"><img src={require("../Home/images/image0.jpg")} width="95%" alt="drs-logo" id = "current-image"/></a>
           </div>
           <div className="slide">
             <div className="content">

@@ -1,7 +1,11 @@
 import React, { Component } from "react";
+import Customer from '../../index.js';
 
-class Customer extends Component {
-  componentDidMount() {}
+class Customerpage extends Component {
+
+  componentDidMount() {
+
+  }
     render() {
       return (
         <table className="table">
@@ -18,21 +22,25 @@ class Customer extends Component {
     <tbody>
       <tr>
         <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
+        <td id = "name">Mark</td>
+        <td id = "make" >Otto</td>
+        <td id = "model" >Otto</td>
+        <td id = "vin" >Otto</td>
+        <td id = "serviceDate" >Otto</td>
+        <td id = "notes" >Otto</td>
         <td>@mdo</td>
       </tr>
       <tr>
         <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -42,4 +50,4 @@ class Customer extends Component {
    
   
   }
-export default Customer;
+export default Customerpage;
