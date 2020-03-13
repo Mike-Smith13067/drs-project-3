@@ -8,20 +8,30 @@ const church = "Co-supervisor and Pest Control"
 const snook = "Co-supervisor and Pest Control"
 
 class About extends Component {
-  componentDidMount() {}
-    render() {
-      return (
-        <div className="container">
-          <Card text={missionStatement} />
-          <Card text ={bio} />
-          <Card text ={casey} />
-          <Card text ={church} />
-          <Card text ={snook} />
-        </div>
-      ) 
-      
-    }
-   
-  
+  componentDidMount() { }
+  render() {
+    return (
+      <div className="container">
+          <div class="col-sm">A
+            <Card text={missionStatement} />
+          </div>
+          <div class="col-sm">B
+            <Card text={bio} />
+          </div>
+          <div class="col-sm">
+            <Card text={casey} />
+          </div>
+          <div class="col-sm">
+            <Card text={church} />
+          </div>
+          <div class="col-sm">
+            <Card text={snook} />
+          </div>
+      </div >
+    )
+
   }
-  export default About;
+
+
+}
+export default About;

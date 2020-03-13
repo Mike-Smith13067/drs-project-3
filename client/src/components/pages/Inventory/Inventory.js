@@ -1,24 +1,28 @@
 import React, { Component } from "react";
+// import Inventory from '../../../../../models/inventory';
+import "./style.css";
 
-class Inventory extends Component {
+class Inventorypage extends Component {
   componentDidMount() {}
     render() {
       return (
         <table className="table">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Current</th>
-        <th scope="col">Max</th>
-        <th scope="col">Min</th>
+        <th class = "table-head" scope="col">Part Number#</th>
+        <th class = "table-head" scope="col">Name</th>
+        <th class = "table-head" scope="col">Current</th>
+        <th class = "table-head" scope="col">Max</th>
+        <th class = "table-head" scope="col">Min</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
+      <tr  class = "table-body">
+        
         <td>Mark</td>
         <td>Otto</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
         <td>@mdo</td>
       </tr>
       <tr>
@@ -43,4 +47,4 @@ class Inventory extends Component {
   }
 
 
-export default Inventory;
+export default Inventorypage;

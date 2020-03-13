@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Customer from '../../index.js';
+import Customer from '../../../index.js';
+import "./style.css";
 
 class Customerpage extends Component {
 
@@ -11,17 +12,16 @@ class Customerpage extends Component {
         <table className="table">
     <thead>
       <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Make</th>
-        <th scope="col">Model</th>
-        <th scope="col">Vin</th>
-        <th scope="col">Service</th>
-        <th scope="col">Notes</th>
+        <th class = "table-head" scope="col">Name</th>
+        <th class = "table-head" scope="col">Make</th>
+        <th class = "table-head" scope="col">Model</th>
+        <th class = "table-head" scope="col">Vin</th>
+        <th class = "table-head" scope="col">Service</th>
+        <th class = "table-head" scope="col">Notes</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
+      <tr class = "table-body">
         <td id = "name">Mark</td>
         <td id = "make" >Otto</td>
         <td id = "model" >Otto</td>

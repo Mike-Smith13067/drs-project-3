@@ -1,0 +1,10 @@
+.table-head {
+    width: 25%;
+    background-color: grey;
+}
+
+.table-body {
+    text-align: center;
+    border-style: solid, black;
+    background-color:  lightgrey;
+}
