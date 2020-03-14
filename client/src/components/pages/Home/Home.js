@@ -33,6 +33,7 @@ class Home extends Component {
     let slideInterval;
     const nextSlide = () => {
       counter++
+
       if (counter >= 6) {
         counter = 0
       }
@@ -47,6 +48,7 @@ class Home extends Component {
       var imageArray = [image0, image1, image2, image3, image4, image5];
       var h2Array = [h20, h21, h22, h23, h24, h25];
       var pArray = [p0, p1, p2, p3, p4, p5];
+
       var image = imageArray[counter];
       var subheader = h2Array[counterh2];
       var subtext = pArray[counter];
