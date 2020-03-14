@@ -1,5 +1,14 @@
 import React, { Component } from "react";
 // import test from ./images"
+const image0 = require("../Home/images/image0.jpg")
+const image1 = require("../Home/images/image1.jpg")
+const image2 = require("../Home/images/image2.jpg")
+const image3 = require("../Home/images/image3.jpg")
+const image4 = require("../Home/images/image4.jpg")
+const image5 = require("../Home/images/image5.jpg")
+const image6 = require("../Home/images/image6.jpg")
+const image7 = require("../Home/images/image7.jpg")
+
 
 class Home extends Component {
   componentDidMount() {
@@ -7,8 +16,8 @@ class Home extends Component {
     const next = document.querySelector('#next');
     const prev = document.querySelector('#prev');
     const auto = true; // Auto scroll
-    const intervalTime = 11000;
-    let counter = 0;
+    const intervalTime = 4000;
+    let counter = 1;
     let slideInterval;
     
 
@@ -19,14 +28,14 @@ class Home extends Component {
 
       }
 
+      var imageArray = [ image0, image1, image2, image3, image4, image5, image6, image7]; 
+      var image = imageArray[counter];
+      var currentImage = document.getElementById("current-image");
+      currentImage.setAttribute("src", image);
 
-      // var image = `../images/image${counter}.jpg`;
-      // var currentImage = document.getElementById("current-image");
-      // currentImage.setAttribute("src", image);
 
 
-
-      // return image;
+      return image;
     };
 
     const prevSlide = () => {
