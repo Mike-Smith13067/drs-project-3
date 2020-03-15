@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 // import test from ./images"
-const image0 = require("../Home/images/image0.jpg")
-const image1 = require("../Home/images/image1.jpg")
-const image2 = require("../Home/images/image2.jpg")
-const image3 = require("../Home/images/image3.jpg")
-const image4 = require("../Home/images/image4.jpg")
-const image5 = require("../Home/images/image5.jpg")
-
+const image0 = require("../../../assets/images/image0.jpg")
+const image1 = require("../../../assets/images/image1.jpg")
+const image2 = require("../../../assets/images/image2.jpg")
+const image3 = require("../../../assets/images/image3.jpg")
+const image4 = require("../../../assets/images/image4.jpg")
+const image5 = require("../../../assets/images/image5.jpg")
 const h20 = "";
 const h21 = "Diagnostic Test";
 const h22 = "Brake Test";
@@ -31,9 +30,10 @@ class Home extends Component {
     let counterh2 = 1;
     let counterp = 1;
     let slideInterval;
+
+
     const nextSlide = () => {
       counter++
-
       if (counter >= 6) {
         counter = 0
       }
@@ -41,22 +41,25 @@ class Home extends Component {
       if (counterh2 >= 6) {
         counterh2 = 0
       }
-      counterp++
+          counterp++
       if (counterp >= 6) {
         counterp = 0
       }
       var imageArray = [image0, image1, image2, image3, image4, image5];
       var h2Array = [h20, h21, h22, h23, h24, h25];
       var pArray = [p0, p1, p2, p3, p4, p5];
-
       var image = imageArray[counter];
       var subheader = h2Array[counterh2];
       var subtext = pArray[counter];
+
+
       var currentImage = document.getElementById("current-image");
       currentImage.setAttribute("src", image);
+
       var currentSubheader = document.getElementById("subheader");
       currentSubheader.innerHTML = "";
       currentSubheader.append(subheader);
+
       var currentSubtext = document.getElementById("subtext");
       currentSubtext.innerHTML = "";
       currentSubtext.append(subtext);
@@ -103,7 +106,7 @@ class Home extends Component {
       <div>
         <div className="slider">
           <div className="slide current">
-            <a href="https://flyclipart.com/automotive-mechanic-car-repair-retro-auto-repair-clip-art-517846" title="Automotive Mechanic Car Repair Retro - Auto Repair Clip Art"><img src={require("../Home/images/image0.jpg")} width="95%" alt="drs-logo" id="current-image" /></a>
+            <a href="https://flyclipart.com/automotive-mechanic-car-repair-retro-auto-repair-clip-art-517846" title="Automotive Mechanic Car Repair Retro - Auto Repair Clip Art"><img src={require("../../../assets/images/image0.jpg")} width="95%" alt="drs-logo" id="current-image" /></a>
           </div>
           <div className="slide">
             <div className="content">
@@ -111,6 +114,7 @@ class Home extends Component {
               <p id="subtext"></p>
             </div>
           </div>
+
         </div>
         <div className="buttons">
           <button id="prev"><i className="fas fa-arrow-left"></i></button>

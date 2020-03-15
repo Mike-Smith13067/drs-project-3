@@ -1,13 +1,12 @@
-.nav-item {
-    width: 20%;
+.navbar-item {
+    width: 10%;
     background-color: black;
-    color: red;
+    color: white;
     float: left;
 
 }
-.btn-primary {
-    background-color: grey
-
+.nav-link {
+    color: white;
 }
 
 .nav-link {

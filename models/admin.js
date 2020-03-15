@@ -59,4 +59,4 @@ adminSchema.methods = {
 
 const Admin = mongoose.model("Admin", adminSchema);
 
-export default Admin;
+module.exports = Admin;
