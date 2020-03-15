@@ -10,4 +10,4 @@ const inventoryItemSchema = new Schema({
 
 const Inventory = mongoose.model("Inventory", inventoryItemSchema);
 
-export default Inventory;
+module.exports = Inventory;

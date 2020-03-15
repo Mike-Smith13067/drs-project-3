@@ -1,7 +1,5 @@
  
-const crypto = require ('crypto');
-
- 
+const crypto = require ('crypto'); 
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
@@ -63,4 +61,4 @@ customerSchema.methods = {
 
 const Customer = mongoose.model("Customer", customerSchema);
 
-export default Customer;
+module.exports = Customer;
