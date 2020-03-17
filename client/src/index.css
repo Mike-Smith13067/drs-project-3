@@ -1,26 +1,20 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Navbar */
+.col-nav{
+  background-color: #2F197F;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar-brand {
+  color: white;
 }
-
 /* Carousel */
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+} */
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -37,11 +31,14 @@ body {
 }
 
 .slide {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  /* padding-top: 5em;
+  padding-right: 10em;
+  padding-left: 5em; */
+  /* top: 5; */
+  /* right: 0; */
   width: 100%;
-  height: 100%;
+  height:100%;
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
 }
@@ -55,7 +52,7 @@ body {
   bottom: 70px;
   left: -600px;
   opacity: 0;
-  width: 800px;
+  width: 600px;
   background-color: rgba(255, 255, 255, 0.8);
   color: #333;
   padding: 35px;
@@ -71,6 +68,13 @@ body {
   transition: all 0.7s ease-in-out 0.3s;
 }
 
+.slide.current .content {
+  transform: translateY(-300px);
+  background-color: #333;
+  color: #333;
+}
+
+
 .buttons button#next {
   position: absolute;
   top: 40%;
@@ -84,7 +88,7 @@ body {
 }
 
 .buttons button {
-  border: 2px solid #333;
+  border: 2px solid #fff;
   background-color: grey;
   opacity: 50%;
   color: #fff;
@@ -100,15 +104,10 @@ body {
 }
 
 @media (max-width: 500px) {
-  .slide .content {
+  .slide .content .buttons button{
     bottom: -300px;
     left: 0;
     width: 100%;
   }
 
-.slide.current .content {
-    transform: translateY(-300px);
-    background-color: #333;
-    color: #333;
-  }
 }

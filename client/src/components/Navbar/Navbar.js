@@ -7,7 +7,6 @@ import {
     Nav,
     NavItem,
     NavLink,
-    Container
 } from 'reactstrap';
 
 class Navtabs extends Component {
@@ -23,8 +22,8 @@ class Navtabs extends Component {
 
     render() {
         return (<div>
-            <Navbar color="dark" dark expand="sm" className="mb-5 navbar-item">
-                <Container>
+            <Navbar dark expand="sm" className="col-nav">
+                
                     <NavbarBrand href="/">DRS Automotive Services</NavbarBrand>
                     <NavbarToggler onClick={
                         this.toggle
@@ -68,10 +67,12 @@ class Navtabs extends Component {
 
                         </Nav>
                     </Collapse>
-                </Container>
+                
             </Navbar>
         </div>);
     }
 }
 
 export default Navtabs;
+
+
