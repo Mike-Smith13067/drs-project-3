@@ -1,39 +1,72 @@
-import React, {Component }from "react";
-import { Redirect, Link } from 'react-router-dom'
-import "./style.css";
-import axios from 'axios';
+import React, {Component} from 'react';
+import {
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    Container
+} from 'reactstrap';
 
-class NavTabs extends Component {
+class Navtabs extends Component {
+    state = {
+        isOpen: false
+    }
 
-  render() {
-    return (
-        <nav className="navbar navbar-dark bg-dark nabvar-expand-lg">
-            <Link to="/" className="navbar-brand">DRS Automotive Services</Link>
-            <div className="">
-                <ul className="navbar-nav">
-                    <li className="navbar-item">
-                        <Link to="/" className="nav-link">Home</Link>
-                    </li>
-                    <li className="navbar-item">
-                        <Link to="/About" className="nav-link">About</Link>
-                    </li>
-                    <li className="navbar-item">
-                        <Link to="/Admin" className="nav-link">Admin</Link>
-                    </li>
-                    <li className="navbar-item">
-                        <Link to="/Inventory" className="nav-link">Inventory</Link>
-                    </li>
-                    <li className="navbar-item">
-                        <Link to="/Contact" className="nav-link">Contact</Link>
-                    </li>
-                    <li className="navbar-item">
-                        <Link to="/Customer" className="nav-link">Customer</Link>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    );
+    toggle = () => {
+        this.setState({
+            isOpen: !this.state.isOpen
+        });
+    }
+
+    render() {
+        return (<div>
+            <Navbar color="dark" dark expand="sm" className="mb-5 navbar-item">
+                <Container>
+                    <NavbarBrand href="/">DRS Automotive Services</NavbarBrand>
+                    <NavbarToggler onClick={
+                        this.toggle
+                    }/>
+                    <Collapse isOpen={
+                            this.state.isOpen
+                        }
+                        navbar>
+                        <Nav className="ml-auto" navbar>
+                            <NavItem>
+                                <NavLink href="/About">
+                                    About
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/Contact">
+                                    Contact
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/Customer">
+                                    Customer
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/Inventory">
+                                    Inventory
+                                </NavLink>
+                            </NavItem>
+
+                            <NavItem>
+                                <NavLink href="/Admin">
+                                    Admin
+                                </NavLink>
+                            </NavItem>
+
+                        </Nav>
+                    </Collapse>
+                </Container>
+            </Navbar>
+        </div>);
+    }
 }
-}
 
-export default NavTabs;
+export default Navtabs;
