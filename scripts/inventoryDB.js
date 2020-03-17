@@ -10,6 +10,7 @@ mongoose.connect(
 
 const inventory_item = [
   {
+    partname: "xxxx",
     name: "Oil 10/40",
     max: "5",
     min: "1",
