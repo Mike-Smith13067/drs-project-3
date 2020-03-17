@@ -19,7 +19,15 @@ const p2 = "The brake inspection typically involves checking the brake component
 const p3 = "Checking fluid levels regularly and changing the fluids and filters periodically can minimize the risks of breakdowns and prolong the life of the engine, transmission, cooling system and brakes. So, if you are driving a (maintenance challenged) vehicle, isn't it about time to start paying closer attention to the fluids and filters?";
 const p4 = "Regular engine tune-ups restore power and efficiency back to your car. At DRS Auto Services we'll visually inspect your engine components. Install new parts (including spark plugs, fuel and air filters) as necessary, adjust timing and idle settings if applicable, and provide fuel system cleaning services to restore fuel system performance.  By following your vehicle manufacturer's recommendations, you're investing in your vehicle's longevity. Saving you time and money in the long run.  Contact us today to find out additional information.";
 const p5 = "Properly maintained tires will give you a safer, more comfortable ride and a longer tread life. Tire component properties evolve over time. For each tire, this evolution depends upon many factors such as weather, storage conditions, and conditions of use (load, speed, inflation pressure, maintenance etc.) to which the tire is subjected throughout its life. In addition to regular inspections and inflation pressure maintenance by consumers, it is recommended to have passenger car tires and light truck tires, including spare tires, inspected regularly by a qualified tire specialist, such as a tire dealer, who will assess the tire's suitability for continued service.";
+
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      slideInterval: null
+    }
+  }
+
   componentDidMount() {
     const slides = document.querySelectorAll('.slide');
     const next = document.querySelector('#next');
@@ -41,7 +49,7 @@ class Home extends Component {
       if (counterh2 >= 6) {
         counterh2 = 0
       }
-          counterp++
+      counterp++
       if (counterp >= 6) {
         counterp = 0
       }
@@ -85,16 +93,19 @@ class Home extends Component {
       nextSlide();
       if (auto) {
         clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, intervalTime);
+        slideInterval = this.state.slideInterval(intervalTime)
+        this.setState({ slideInterval: slideInterval })
+
       }
     });
     prev.addEventListener('click', e => {
       prevSlide();
-      if (auto) {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, intervalTime);
-      }
-    });
+      if (auto) {
+        clearInterval(slideInterval);
+        slideInterval = this.state.slideInterval(intervalTime)
+        this.setState({slideInterval: slideInterval})
+      }      
+    });
     // Auto slide
     if (auto) {
       // Run next slide at interval time

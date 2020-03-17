@@ -1,13 +1,9 @@
 import React, { Component } from "react";
-// import Inventory from '../../../../../models/inventory';
+import axios from 'axios';
 import "./style.css";
 
-class Inventorypage extends Component {
-  componentDidMount() {}
-    render() {
-      return (
-        <table className="table">
-    <thead>
+const Inventory = props => (
+<thead>
       <tr>
         <th class = "table-head" scope="col">Part Number#</th>
         <th class = "table-head" scope="col">Name</th>
@@ -16,6 +12,18 @@ class Inventorypage extends Component {
         <th class = "table-head" scope="col">Min</th>
       </tr>
     </thead>
+)
+
+class Inventorypage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {inventory: []};
+  }
+  componentDidMount() {}
+    render() {
+      return (
+        <table className="table">
+    
     <tbody>
       <tr  class = "table-body">
         

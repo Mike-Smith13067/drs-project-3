@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
     Collapse,
     Navbar,
@@ -28,12 +28,17 @@ class Navtabs extends Component {
                     <NavbarBrand href="/">DRS Automotive Services</NavbarBrand>
                     <NavbarToggler onClick={
                         this.toggle
-                    }/>
+                    } />
                     <Collapse isOpen={
-                            this.state.isOpen
-                        }
+                        this.state.isOpen
+                    }
                         navbar>
                         <Nav className="ml-auto" navbar>
+                            <NavItem>
+                                <NavLink href="/">
+                                    Home
+                                </NavLink>
+                            </NavItem>
                             <NavItem>
                                 <NavLink href="/About">
                                     About
