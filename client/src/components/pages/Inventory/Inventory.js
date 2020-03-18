@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from 'axios';
 import "./style.css";
 
-const Inventory = props => (
+
   <thead>
     <tr>
       <th className="table-head" scope="col">Part Number#</th>
@@ -12,11 +12,13 @@ const Inventory = props => (
       <th className="table-head" scope="col">Min</th>
     </tr>
   </thead>
+
 )
 
 class Inventorypage extends Component {
   constructor(props) {
     super(props);
+
     this.state = { inventory: [] };
   }
   componentDidMount() {
@@ -55,8 +57,7 @@ class Inventorypage extends Component {
         </table>
       </div>
     )
+
   }
 }
-
-
 export default Inventorypage;

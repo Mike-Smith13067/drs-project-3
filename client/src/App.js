@@ -11,7 +11,7 @@ import Admin from "./components/pages/Admin/Admin.js";
 class HomePage extends Component {
   render() {
     return (
-      <div className='container'>
+      // <div className='container'>
         <BrowserRouter>
           <NavTabs />
           <div className="col-12">
@@ -38,7 +38,7 @@ class HomePage extends Component {
           </div>
         </BrowserRouter>
 
-      </div>
+      // </div>
     );
   }
 }
