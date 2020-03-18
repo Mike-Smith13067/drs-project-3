@@ -93,20 +93,15 @@ class Home extends Component {
       nextSlide();
       if (auto) {
         clearInterval(slideInterval);
-
         slideInterval = setInterval(nextSlide, intervalTime);
-
         this.setState({ slideInterval: slideInterval })
-
       }
     });
     prev.addEventListener('click', e => {
       prevSlide();
       if (auto) {
         clearInterval(slideInterval);
-
          slideInterval = setInterval(nextSlide, intervalTime);
-
         this.setState({slideInterval: slideInterval})
       }      
     });

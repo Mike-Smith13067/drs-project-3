@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import axios from 'axios';
 import "./style.css";
 
-const Inventory = props => (
 
 class Inventorypage extends Component {
   constructor(props) {
     super(props);
 
     this.state = { inventory: [] };
+
   }
   componentDidMount() {
     axios.get('/inventory')
@@ -49,6 +49,4 @@ class Inventorypage extends Component {
 
   }
 }
-
-
 export default Inventorypage;
