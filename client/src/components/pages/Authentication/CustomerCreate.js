@@ -3,9 +3,9 @@ import React, { Component } from "react";
 class CustomerCreate extends Component {
     componentDidMount() { };
     render() {
-        console.group("Test");
         return (
             <div>
+                <p>Test</p>
                 <div className="input-group mb-3">
                     <div className="input-group-prepend">
                         <span className="input-group-text" id="basic-addon1">@</span>

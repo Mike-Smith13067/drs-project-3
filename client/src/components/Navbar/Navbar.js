@@ -64,6 +64,11 @@ class Navtabs extends Component {
                                     Admin
                                 </NavLink>
                             </NavItem>
+                            <NavItem>
+                                <NavLink href="/Authentication">
+                                    Create Account
+                                </NavLink>
+                            </NavItem>
 
                         </Nav>
                     </Collapse>

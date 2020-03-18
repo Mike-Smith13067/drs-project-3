@@ -1,53 +1,50 @@
 import React, { Component } from "react";
-import Customer from '../../../index.js';
+import axios from 'axios';
 import "./style.css";
 
 class Customerpage extends Component {
-
+  constructor(props) {
+    super(props);
+    this.state = { customer: [] };
+  }
   componentDidMount() {
-
+    axios.get('/customer')
+      .then(response => {
+        this.setState({ customer: response.data });
+        console.log(this.state.customer);
+      })
   }
-    render() {
-      return (
+  render() {
+    return (
+      <div>
         <table className="table">
-    <thead>
-      <tr>
-        <th class = "table-head" scope="col">Name</th>
-        <th class = "table-head" scope="col">Make</th>
-        <th class = "table-head" scope="col">Model</th>
-        <th class = "table-head" scope="col">Vin</th>
-        <th class = "table-head" scope="col">Service</th>
-        <th class = "table-head" scope="col">Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class = "table-body">
-        <td id = "name">Mark</td>
-        <td id = "make" >Otto</td>
-        <td id = "model" >Otto</td>
-        <td id = "vin" >Otto</td>
-        <td id = "serviceDate" >Otto</td>
-        <td id = "notes" >Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-      ) 
-      
-    }
-   
-  
+          <thead>
+            <tr>
+              <th className="table-head" scope="col">Name</th>
+              <th className="table-head" scope="col">Make</th>
+              <th className="table-head" scope="col">Model</th>
+              <th className="table-head" scope="col">Vin</th>
+              <th className="table-head" scope="col">Service</th>
+              <th className="table-head" scope="col">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              this.state.customer.map((customeritem) =>
+              <tr className="table-body" key= {customeritem._id}>
+                <td>{customeritem.name}</td>
+                <td>{customeritem.make}</td>
+                <td>{customeritem.model}</td>
+                <td>{customeritem.vin}</td>
+                <td>{customeritem.service}</td>
+                <td>{customeritem.notes}</td>
+              </tr>
+              )}
+          </tbody>
+        </table>
+      </div>
+    )
   }
+
+}
 export default Customerpage;
