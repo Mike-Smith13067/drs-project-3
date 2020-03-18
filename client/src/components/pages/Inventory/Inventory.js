@@ -3,23 +3,12 @@ import axios from 'axios';
 import "./style.css";
 
 
-  <thead>
-    <tr>
-      <th className="table-head" scope="col">Part Number#</th>
-      <th className="table-head" scope="col">Name</th>
-      <th className="table-head" scope="col">Current</th>
-      <th className="table-head" scope="col">Max</th>
-      <th className="table-head" scope="col">Min</th>
-    </tr>
-  </thead>
-
-)
-
 class Inventorypage extends Component {
   constructor(props) {
     super(props);
 
     this.state = { inventory: [] };
+
   }
   componentDidMount() {
     axios.get('/inventory')
