@@ -1,11 +1,12 @@
-.table-head {
+.table {
     position: center;
-    width: 20%;
+    text-align: center;
+    width: 100%;
     background-color: grey;
+    border-color: black;
 }
 
 .table-body {
     text-align: center;
-    border-style: solid, black;
     background-color:  lightgrey;
 }

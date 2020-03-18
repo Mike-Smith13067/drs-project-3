@@ -1,11 +1,11 @@
 const router = require('express').Router();
-let Inventory = require('../../models/inventory');
+const db = require('../../models/');
 
 //Get all inventory from mongo
 router.route('/').get((req, res) => {
-    Inventory.find()
+    db.Inventory.find({})
         .then(inventory => res.json(inventory))
-        .catch(err = res.status(400).json('Error: ' + err));
+        .catch(err => res.status(400).json('Error: ' + err));
 });
 
 //Add new invenotory item to database
