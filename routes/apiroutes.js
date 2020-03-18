@@ -64,14 +64,14 @@ function apiroutes(app) {
 
     // Inventory routes
 
-    app.get("/api/inventory", function(req, res) {
-        db.Inventory.find({}).then(function(data) {
-           res.json(data)
-        }).catch(function(err) {
-            res.json(err);
-        });
+    // app.get("/api/inventory", function(req, res) {
+    //     db.Inventory.find({}).then(function(data) {
+    //        res.json(data)
+    //     }).catch(function(err) {
+    //         res.json(err);
+    //     });
        
-    });
+    // });
 
     app.post("/api/inventory", function(req, res) {
         db.Inventory.create(req.body).then(function(data) {

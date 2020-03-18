@@ -10,10 +10,10 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 
 const inventoryRouter = require('./routes/inventory/inventory');
-app.use('./inventory', inventoryRouter)
+app.use('/inventory', inventoryRouter)
 
 const customerRouter = require('./routes/customer/customer');
-app.use('./customer', customerRouter)
+app.use('/customer', customerRouter)
 
 const apiroutes = require("./routes/apiroutes")
 apiroutes(app)

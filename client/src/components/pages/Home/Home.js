@@ -93,8 +93,7 @@ class Home extends Component {
       nextSlide();
       if (auto) {
         clearInterval(slideInterval);
-        slideInterval = this.state.slideInterval(intervalTime)
-        this.setState({ slideInterval: slideInterval })
+        slideInterval = setInterval(nextSlide, intervalTime);
 
       }
     });
@@ -102,8 +101,9 @@ class Home extends Component {
       prevSlide();
       if (auto) {
         clearInterval(slideInterval);
-        slideInterval = this.state.slideInterval(intervalTime)
-        this.setState({slideInterval: slideInterval})
+
+         slideInterval = setInterval(nextSlide, intervalTime);
+
       }      
     });
     // Auto slide
