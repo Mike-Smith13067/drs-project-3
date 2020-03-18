@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from 'axios';
 import "./style.css";
 
-
 class Inventorypage extends Component {
   constructor(props) {
     super(props);

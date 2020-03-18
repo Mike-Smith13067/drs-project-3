@@ -12,19 +12,19 @@ class About extends Component {
   render() {
     return (
       <div className="container">
-          <div class="col-sm">A
+          <div className>A
             <Card text={missionStatement} />
           </div>
-          <div class="col-sm">B
+          <div className="col-sm">B
             <Card text={bio} />
           </div>
-          <div class="col-sm">
-            <Card text={casey} />
+          <div className="col-sm">
+            <Card card-text={casey} />
           </div>
-          <div class="col-sm">
+          <div className="col-sm">
             <Card text={church} />
           </div>
-          <div class="col-sm">
+          <div className="col-sm">
             <Card text={snook} />
           </div>
       </div >

@@ -2,8 +2,13 @@
 
     background-color: lightgray;
 }
+.card-text {
+    color: red;
+    background-color: green;
+}
 
 .col-sm {
-    possition: relative;
+    color: red;
+    background-color: green;
     width: 20%;
 }
