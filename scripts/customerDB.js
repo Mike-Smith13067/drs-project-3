@@ -10,30 +10,13 @@ mongoose.connect(
 
 const customer = [
   {
-    name: {
-        type: String,
-        trim: true,
-        required: 'Name is required'
-      },
-      password: {
-        type: String,
-        trim: true,
-        required: 'Password is required'
-      },
-      make: {
-        type: String
-      },
-      model: {
-        type: String
-      },
-      vin: {
-        type: String
-      },
-      service: new Date(Date.now()),
-      notes: {
-        type: String
-      },
-      admin: false
+    name: "Mike Smith",
+    make: "Jeep",
+    model: "Wrangler X",
+    vin: "XXXX",
+    mileage: "XXXXX",
+    lastServiceDate: "1/16/2020",
+    notes: "Best Customer Ever!!"
     },
 ];
 
