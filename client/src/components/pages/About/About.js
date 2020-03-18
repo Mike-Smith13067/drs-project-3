@@ -12,7 +12,7 @@ class About extends Component {
   render() {
     return (
       <div className="container">
-          <div className="col-sm">A
+          <div className>A
             <Card text={missionStatement} />
           </div>
           <div className="col-sm">B

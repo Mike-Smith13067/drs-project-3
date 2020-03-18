@@ -7,7 +7,6 @@ function Card(props) {
     <div className="card">
       <div className="card-body">
         <p className="card-text">
-          {props.text}
         </p>
       </div>
     </div>
