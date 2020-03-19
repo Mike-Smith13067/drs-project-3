@@ -7,14 +7,15 @@ import Inventory from "./components/pages/Inventory/Inventory.js";
 import About from "./components/pages/About/About.js";
 import Contact from "./components/pages/Contact/Contact.js";
 import Admin from "./components/pages/Admin/Admin.js";
-
+import Footer from "./components/Footer/Footer";
 class HomePage extends Component {
   render() {
     return (
       // <div className='container'>
         <BrowserRouter>
           <NavTabs />
-          <div className="col-12">
+          <Footer />
+          <div>
             <Switch>
               <Route exact path="/">
                 <Home />
