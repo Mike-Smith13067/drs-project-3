@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 const Footer = () => {
         return (
             <div className="footer">
-                <div className="container">
+                <div className="col-footer">
                     <div className="justify-footer-text-left">Copyright &copy; 2020</div>
                     <div className="justify-footer-text-center">
                         <a className="btn btn-social-icon btn-facebook" href="https://www.facebook.com/DRSAutomotiveSolutions/"></a>
