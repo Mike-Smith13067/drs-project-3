@@ -9,4 +9,8 @@
 .table-body {
     text-align: center;
     background-color:  lightgrey;
+    color: black;
+}
+td {
+    width: 10%;
 }
