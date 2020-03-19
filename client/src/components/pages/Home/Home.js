@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 // import test from ./images"
 const image0 = require("../../../assets/images/image0.jpg")
 const image1 = require("../../../assets/images/image1.jpg")
@@ -21,116 +21,176 @@ const p4 = "Regular engine tune-ups restore power and efficiency back to your ca
 const p5 = "Properly maintained tires will give you a safer, more comfortable ride and a longer tread life. Tire component properties evolve over time. For each tire, this evolution depends upon many factors such as weather, storage conditions, and conditions of use (load, speed, inflation pressure, maintenance etc.) to which the tire is subjected throughout its life. In addition to regular inspections and inflation pressure maintenance by consumers, it is recommended to have passenger car tires and light truck tires, including spare tires, inspected regularly by a qualified tire specialist, such as a tire dealer, who will assess the tire's suitability for continued service.";
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      slideInterval: null
+    constructor(props) {
+        super(props);
+        this.state = {
+            slideInterval: null
+        }
     }
-  }
 
-  componentDidMount() {
-    const slides = document.querySelectorAll('.slide');
-    const next = document.querySelector('#next');
-    const prev = document.querySelector('#prev');
-    const auto = true; // Auto scroll
-    const intervalTime = 4000;
-    let counter = 1;
-    let counterh2 = 1;
-    let counterp = 1;
-    let slideInterval;
+    componentDidMount() {
+        const slides = document.querySelectorAll('.slide');
+        const next = document.querySelector('#next');
+        const prev = document.querySelector('#prev');
+        const auto = true; // Auto scroll
+        const intervalTime = 4000;
+        let counter = 1;
+        let slideInterval;
 
 
-    const nextSlide = () => {
-      counter++
-      if (counter >= 6) {
-        counter = 0
-      }
-      counterh2++
-      if (counterh2 >= 6) {
-        counterh2 = 0
-      }
-      counterp++
-      if (counterp >= 6) {
-        counterp = 0
-      }
-      var imageArray = [image0, image1, image2, image3, image4, image5];
-      var h2Array = [h20, h21, h22, h23, h24, h25];
-      var pArray = [p0, p1, p2, p3, p4, p5];
-      var image = imageArray[counter];
-      var subheader = h2Array[counterh2];
-      var subtext = pArray[counter];
+        const nextSlide = () => {
+            counter++
+            if (counter >= 6) {
+                counter = 0
+            }
+
+            var imageArray = [
+                image0,
+                image1,
+                image2,
+                image3,
+                image4,
+                image5
+            ];
+            var h2Array = [
+                h20,
+                h21,
+                h22,
+                h23,
+                h24,
+                h25
+            ];
+            var pArray = [
+                p0,
+                p1,
+                p2,
+                p3,
+                p4,
+                p5
+            ];
+            var image = imageArray[counter];
+            var subheader = h2Array[counter];
+            var subtext = pArray[counter];
 
 
-      var currentImage = document.getElementById("current-image");
-      currentImage.setAttribute("src", image);
+            var currentImage = document.getElementById("current-image");
+            currentImage.setAttribute("src", image);
+            console.log(image);
 
-      var currentSubheader = document.getElementById("subheader");
-      currentSubheader.innerHTML = "";
-      currentSubheader.append(subheader);
 
-      var currentSubtext = document.getElementById("subtext");
-      currentSubtext.innerHTML = "";
-      currentSubtext.append(subtext);
-      return image, subheader, subtext;
-    };
-    const prevSlide = () => {
-      // Get current class
-      const current = document.querySelector('.current');
-      // Remove current class
-      current.classList.remove('current');
-      // Check for prev slide
-      if (current.previousElementSibling) {
-        // Add current to prev sibling
-        current.previousElementSibling.classList.add('current');
-      } else {
-        // Add current to last
-        slides[slides.length - 1].classList.add('current');
-      }
-      setTimeout(() => current.classList.remove('current'));
-    };
-    // Button events
-    next.addEventListener('click', e => {
-      nextSlide();
-      if (auto) {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, intervalTime);
-        this.setState({ slideInterval: slideInterval })
-      }
-    });
-    prev.addEventListener('click', e => {
-      prevSlide();
-      if (auto) {
-        clearInterval(slideInterval);
-         slideInterval = setInterval(nextSlide, intervalTime);
-        this.setState({slideInterval: slideInterval})
-      }      
-    });
-    // Auto slide
-    if (auto) {
-      // Run next slide at interval time
-      slideInterval = setInterval(nextSlide, intervalTime);
+            var currentSubheader = document.getElementById("subheader");
+            currentSubheader.innerHTML = "";
+            currentSubheader.append(subheader);
+            console.log(subheader);
+
+            var currentSubtext = document.getElementById("subtext");
+            currentSubtext.innerHTML = "";
+            currentSubtext.append(subtext);
+            return image, subheader, subtext;
+        };
+        const prevSlide = () => {
+          counter--
+          if (counter < 0) {
+              counter = 6
+          }
+          var imageArray = [
+              image0,
+              image1,
+              image2,
+              image3,
+              image4,
+              image5
+          ];
+          var h2Array = [
+              h20,
+              h21,
+              h22,
+              h23,
+              h24,
+              h25
+          ];
+          var pArray = [
+              p0,
+              p1,
+              p2,
+              p3,
+              p4,
+              p5
+          ];
+          var image = imageArray[counter];
+          var subheader = h2Array[counter];
+          var subtext = pArray[counter];
+
+
+          var currentImage = document.getElementById("current-image");
+          currentImage.setAttribute("src", image);
+          console.log(image);
+        
+
+          var currentSubheader = document.getElementById("subheader");
+          currentSubheader.innerHTML = "";
+          currentSubheader.append(subheader);
+          console.log(subheader);
+
+          var currentSubtext = document.getElementById("subtext");
+          currentSubtext.innerHTML = "";
+          currentSubtext.append(subtext);
+          return image, subheader, subtext;
+      };
+
+      // Button events
+        next.addEventListener('click', e => {
+            nextSlide();
+            if (auto) {
+                clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, intervalTime)
+                this.setState({slideInterval: slideInterval})
+
+            }
+        });
+        prev.addEventListener('click', e => {
+            prevSlide();
+            if (auto) {
+                clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, intervalTime)
+                this.setState({slideInterval: slideInterval})
+            }
+        });
+        // Auto slide
+        if (auto) { // Run next slide at interval time
+            slideInterval = setInterval(nextSlide, intervalTime);
+        }
     }
-  }
-  render() {
-    return (
-      <div>
-        <div className="slider">
-          <div className="slide current">
-            <a href="https://flyclipart.com/automotive-mechanic-car-repair-retro-auto-repair-clip-art-517846" title="Automotive Mechanic Car Repair Retro - Auto Repair Clip Art"><img src={require("../../../assets/images/image0.jpg")} width="95%" alt="drs-logo" id="current-image" /></a>
-          </div>
-          <div className="slide">
-            <div className="content">
-              <h2 id="subheader"></h2>
-              <p id="subtext"></p>
+    render() {
+        return (
+            <div>
+                <div className="slider">
+                    <div className="slide current">
+                        <a href="https://flyclipart.com/automotive-mechanic-car-repair-retro-auto-repair-clip-art-517846" title="Automotive Mechanic Car Repair Retro - Auto Repair Clip Art"><img src={
+                                    require("../../../assets/images/image0.jpg")
+                                }
+                                width="100%"
+                                alt="drs-logo"
+                                id="current-image"/></a>
+                    </div>
+                    <div className="slide">
+                        <div className="content">
+                            <h2 id="subheader">Hello Jeff</h2>
+                            <p id="subtext"></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div className="buttons">
+                    <button id="prev">
+                        <i className="fas fa-arrow-left"></i>
+                    </button>
+                    <button id="next">
+                        <i className="fas fa-arrow-right"></i>
+                    </button>
+                </div>
             </div>
-          </div>
-
-        </div>
-        <div className="buttons">
-          <button id="prev"><i className="fas fa-arrow-left"></i></button>
-          <button id="next"><i className="fas fa-arrow-right"></i></button>
-        </div>
-      </div>)
-  }
+        )
+    }
 }
 export default Home;

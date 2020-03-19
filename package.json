@@ -36,6 +36,7 @@
     "if-env": "^1.0.4",
     "minimist": "^1.2.5",
     "mongoose": "^5.9.3",
+    "react-calendar": "^3.0.0",
     "reactstrap": "^8.4.1"
   }
 }

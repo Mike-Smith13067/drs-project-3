@@ -8,6 +8,7 @@ import {
     NavItem,
     NavLink,
 } from 'reactstrap';
+// import Footer from "../Footer/Footer";
 
 class Navtabs extends Component {
     state = {
@@ -22,6 +23,7 @@ class Navtabs extends Component {
 
     render() {
         return (<div>
+            {/* <Footer /> */}
             <Navbar dark expand="sm" className="col-nav">
                 
                     <NavbarBrand href="/">DRS Automotive Services</NavbarBrand>
