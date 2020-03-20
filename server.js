@@ -15,8 +15,11 @@ app.use('/inventory', inventoryRouter)
 const customerRouter = require('./routes/customer/customer');
 app.use('/customer', customerRouter)
 
-const apiroutes = require("./routes/apiroutes")
-apiroutes(app)
+const workorderRouter = require('./routes/workorder/workorder');
+app.use('/workorder', workorderRouter)
+
+// const apiroutes = require("./routes/apiroutes")
+// apiroutes(app)
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/drs-automotive")
 const connection = mongoose.connection;

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Row from '../../Row';
 import axios from 'axios';
 import "./style.css";
 
@@ -35,6 +36,7 @@ class Inventorypage extends Component {
               <tr className="table-body" key= {inventoryitem._id}>
                 <td>{inventoryitem.partnumber}</td>
                 <td>{inventoryitem.name}</td>
+                <td>On hand</td>
                 <td>{inventoryitem.max}</td>
                 <td>{inventoryitem.min}</td>
                 <td>{inventoryitem.notes}</td>
@@ -43,6 +45,10 @@ class Inventorypage extends Component {
             )}
             </tbody>
         </table>
+        <Row>
+        <button type="button" class="btn btn-light">Add new inventory item</button>
+        <button type="button" class="btn btn-light">Delete an inventory item</button>
+        </Row>
       </div>
     )
 

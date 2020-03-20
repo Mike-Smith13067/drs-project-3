@@ -42,6 +42,7 @@ class Customerpage extends Component {
               )}
           </tbody>
         </table>
+        <button type="button" class="btn btn-primary">View Work History</button>
       </div>
     )
   }
