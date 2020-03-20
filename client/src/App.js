@@ -9,6 +9,7 @@ import Contact from "./components/pages/Contact/Contact.js";
 import Admin from "./components/pages/Admin/Admin.js";
 import Footer from "./components/Footer/Footer";
 import CustomerCreate from "./components/pages/Authentication/CustomerCreate"
+import Privacy from "./components/Footer/Privacy";
 import Row from "./components/Row/index.js";
 class HomePage extends Component {
   render() {
@@ -39,7 +40,7 @@ class HomePage extends Component {
               <Route exact path="/Inventory">
                 <Inventory />
               </Route>          
-              {/* <Footer /> */}
+              <Privacy />
             </Switch>
           </div>
           <Footer />

@@ -6,7 +6,7 @@ const Footer = () => {
             <div class="col-sm-12">
                     <div class="text-center">
                         ©2020 DRS Automtive, All rights reserved.
-                    <a className="nav-link" href="privacy">PRIVACY AND DATA PROTECTION</a>
+                    <a className="nav-link" href="/privacy">PRIVACY AND DATA PROTECTION</a>
                     </div>
                 </div>
             </div>
