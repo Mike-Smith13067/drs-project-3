@@ -117,8 +117,36 @@ body {
   color: white;
 }
 
+/* Privacy */
+
+.privacy {
+  width: 60%;
+  margin-left: 5em;
+}
+
+.privacy h1{
+font-size: 2.5em;
+text-decoration-style: solid;
+color: #333
+}
+
+.privacy h2{
+  font-size: 2em;
+  color: #333
+}
+
+.privacy h3{
+  font-size: 1.5em;
+  color: #333
+}
+
+.privacy p{
+  font-size: 1em;
+  color: #333
+}
+
 @media (max-width: 500px) {
-  .body .content .footer{
+  .body .content .footer .policy{
     bottom: -300px;
     left: 0;
     width: 50%;
