@@ -108,16 +108,13 @@ body {
 }
 
 /* footer */
-
-#footer {
-  position: bottom;
-}
-
 .col-footer {
-  padding-top: 0px;
-  padding-bottom: 0px;
+  position: bottom;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background-color: #FF7D00;
-  font-size: .75rem;
+  font-size: .95rem;
+  color: white;
 }
 
 @media (max-width: 500px) {
