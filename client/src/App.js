@@ -32,7 +32,7 @@ class HomePage extends Component {
               <Route exact path="/Customer">
                 <Customer />
               </Route>
-              <Route exact path="/Authentication/CustomerCreate">
+              <Route exact path="/Authentication">
                 <CustomerCreate />
               </Route>
               <Route exact path="/Inventory">
