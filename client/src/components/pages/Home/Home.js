@@ -33,7 +33,7 @@ class Home extends Component {
         const next = document.querySelector('#next');
         const prev = document.querySelector('#prev');
         const auto = true; // Auto scroll
-        const intervalTime = 4000;
+        const intervalTime = 8000;
         let counter = 1;
         let slideInterval;
 
@@ -175,7 +175,7 @@ class Home extends Component {
                     </div>
                     <div className="slide">
                         <div className="content">
-                            <h2 id="subheader">Hello Jeff</h2>
+                            <h2 id="subheader"></h2>
                             <p id="subtext"></p>
                         </div>
                     </div>

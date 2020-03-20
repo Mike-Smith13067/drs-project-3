@@ -8,13 +8,13 @@ import About from "./components/pages/About/About.js";
 import Contact from "./components/pages/Contact/Contact.js";
 import Admin from "./components/pages/Admin/Admin.js";
 import Footer from "./components/Footer/Footer";
+import CustomerCreate from "./components/pages/Authentication/CustomerCreate"
 class HomePage extends Component {
   render() {
     return (
       // <div className='container'>
         <BrowserRouter>
-          <NavTabs />
-          <Footer />
+          <NavTabs />          
           <div>
             <Switch>
               <Route exact path="/">
@@ -23,48 +23,27 @@ class HomePage extends Component {
               <Route exact path="/About">
                 <About/>
               </Route>
+              <Route exact path="/Admin>">
+                <Admin />
+              </Route>
               <Route exact path="/Contact">
                 <Contact />
               </Route>
               <Route exact path="/Customer">
                 <Customer />
               </Route>
+              <Route exact path="/Authentication/CustomerCreate">
+                <CustomerCreate />
+              </Route>
               <Route exact path="/Inventory">
                 <Inventory />
-              </Route>
-              <Route exact path="/Admin>">
-                <Admin />
-              </Route>
+              </Route>          
+              <Footer />
             </Switch>
           </div>
         </BrowserRouter>
-
-      // </div>
     );
   }
 }
 
 export default HomePage;
-
-
-  // state = {
-  //   currentPage: "Home"
-  // };
-
-  // handlePageChange = page => {
-  //   this.setState({ currentPage: page });
-  // };
-
-  // renderPage = () => {
-  //   if (this.state.currentPage === "Home") {
-  //     return <Home />;
-  //   } else if (this.state.currentPage === "Customer") {
-  //     return <Customer />;
-  //   } else if (this.state.currentPage === "Inventory") {
-  //     return <Inventory />;
-  //   } else if (this.state.currentPage === "About") {
-  //     return <About />;
-  //   } else {
-  //     return <Contact />;
-  //   }
-  // };
