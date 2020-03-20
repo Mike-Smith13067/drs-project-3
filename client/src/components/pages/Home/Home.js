@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 // import test from ./images"
-const image0 = require("../../../assets/images/image0.jpg")
+const image0 = require("../../../assets/images/image013.jpg")
 const image1 = require("../../../assets/images/image1.jpg")
 const image2 = require("../../../assets/images/image2.jpg")
 const image3 = require("../../../assets/images/image3.jpg")
@@ -33,7 +33,7 @@ class Home extends Component {
         const next = document.querySelector('#next');
         const prev = document.querySelector('#prev');
         const auto = true; // Auto scroll
-        const intervalTime = 4000;
+        const intervalTime = 15000;
         let counter = 1;
         let slideInterval;
 
@@ -166,16 +166,16 @@ class Home extends Component {
             <div>
                 <div className="slider">
                     <div className="slide current">
-                        <a href="https://flyclipart.com/automotive-mechanic-car-repair-retro-auto-repair-clip-art-517846" title="Automotive Mechanic Car Repair Retro - Auto Repair Clip Art"><img src={
-                                    require("../../../assets/images/image0.jpg")
+                        <img src={
+                                    require("../../../assets/images/image013.jpg")
                                 }
                                 width="100%"
                                 alt="drs-logo"
-                                id="current-image"/></a>
+                                id="current-image"/>
                     </div>
                     <div className="slide">
                         <div className="content">
-                            <h2 id="subheader">Hello Jeff</h2>
+                            <h2 id="subheader"></h2>
                             <p id="subtext"></p>
                         </div>
                     </div>
