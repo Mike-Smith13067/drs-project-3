@@ -1,14 +1,6 @@
-.card-body {
 
-    background-color: lightgray;
-}
 .card-text {
     color: red;
     background-color: green;
 }
 
-.col-sm {
-    color: red;
-    background-color: green;
-    width: 20%;
-}

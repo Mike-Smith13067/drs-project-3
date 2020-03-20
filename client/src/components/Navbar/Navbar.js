@@ -8,8 +8,6 @@ import {
     NavItem,
     NavLink,
 } from 'reactstrap';
-// import Footer from "../Footer/Footer";
-
 class Navtabs extends Component {
     state = {
         isOpen: false
@@ -46,15 +44,21 @@ class Navtabs extends Component {
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/Contact">
-                                    Contact
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
                                 <NavLink href="/Customer">
                                     Customer
                                 </NavLink>
                             </NavItem>
+                            <NavItem>
+                                <NavLink href="/Authentication">
+                                    Create Account
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/Contact">
+                                    Contact
+                                </NavLink>
+                            </NavItem>
+                            
                             <NavItem>
                                 <NavLink href="/Inventory">
                                     Inventory
@@ -66,11 +70,7 @@ class Navtabs extends Component {
                                     Admin
                                 </NavLink>
                             </NavItem>
-                            <NavItem>
-                                <NavLink href="/Authentication">
-                                    Create Account
-                                </NavLink>
-                            </NavItem>
+                            
 
                         </Nav>
                     </Collapse>
