@@ -54,30 +54,39 @@ body {
 
 .content {
   position: absolute;
-  bottom: 70px;
-  left: 0px;
+  top: 70px;
+  right: 0px;
   opacity: 1;
-  width: 700px;
+  width: 400px;
   background-color: rgba(255, 255, 255, 0.8);
   color: #333;
-  padding: 35px;
+  padding: 20px;
+}
+
+h2{
+  font-size: 140%;
+  text-align: justify;
+}
+
+p {
+  font-size: .80rem;
 }
 
 /* .content h1 {
   margin-bottom: 10px;
-}
+}*/
 
-.slide.current .content {
-  opacity: 1;
+.current .content {
+  opacity: 0;
   transform: translateX(600px);
   transition: all 0.7s ease-in-out 0.3s;
 }
 
-.slide.current .content {
+/* .current .content {
   transform: translateY(-300px);
   background-color: #333;
   color: #333;
-} */
+}  */
 
 .buttons button#next {
   position: absolute;
@@ -131,25 +140,25 @@ color: #333
 }
 
 .privacy h2{
-  font-size: 2em;
-  color: #333
-}
-
-.privacy h3{
   font-size: 1.5em;
   color: #333
 }
 
-.privacy p{
+.privacy h3{
   font-size: 1em;
   color: #333
 }
 
-@media (max-width: 500px) {
+.privacy p{
+  font-size: .75em;
+  color: #333
+}
+
+@media (max-width: 420px) {
   .body .content .footer .policy{
-    bottom: -300px;
+    bottom: -100px;
     left: 0;
-    width: 50%;
+    width: 25%;
   }
 
 }
