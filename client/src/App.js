@@ -14,7 +14,9 @@ class HomePage extends Component {
     return (
       // <div className='container'>
         <BrowserRouter>
+
           <NavTabs />          
+
           <div>
             <Switch>
               <Route exact path="/">
@@ -41,6 +43,7 @@ class HomePage extends Component {
               <Footer />
             </Switch>
           </div>
+          <Footer />
         </BrowserRouter>
     );
   }

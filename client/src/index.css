@@ -30,8 +30,10 @@ body {
   width: 100vw;
 } */
 
-#current-image {
-}
+/* .logo {
+  position: relative;
+  padding-top: 1em;
+} */
 
 .slide {
   /* position: fixed;
@@ -55,7 +57,7 @@ body {
   bottom: 70px;
   left: 0px;
   opacity: 1;
-  width: 600px;
+  width: 700px;
   background-color: rgba(255, 255, 255, 0.8);
   color: #333;
   padding: 35px;
@@ -79,13 +81,13 @@ body {
 
 .buttons button#next {
   position: absolute;
-  top: 40%;
+  top: 50%;
   right: 15px;
 }
 
 .buttons button#prev {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 15px;
 }
 
@@ -108,24 +110,21 @@ body {
 /* footer */
 
 #footer {
-  position: fixed;
-  left:0;
-  bottom:0;
-  right:0;
-  background-color: #FF7D00;
-  padding: 0px 0px 0px 0px;
+  position: bottom;
 }
 
-.footer-container {
-  padding-top: 15px;
-  padding-bottom: 5px;
+.col-footer {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: #FF7D00;
+  font-size: .75rem;
 }
 
 @media (max-width: 500px) {
-  .slide .content .buttons button{
+  .body .content .footer{
     bottom: -300px;
     left: 0;
-    width: 100%;
+    width: 50%;
   }
 
 }
