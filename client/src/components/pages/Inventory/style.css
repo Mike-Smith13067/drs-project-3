@@ -1,5 +1,5 @@
 .table-head {
-    width: 25%;
+    width: 15%;
     background-color: grey;
 }
 
@@ -7,4 +7,8 @@
     text-align: center;
     border-style: solid, black;
     background-color:  lightgrey;
+}
+.btn {
+    border: solid 5px black;
+    
 }
