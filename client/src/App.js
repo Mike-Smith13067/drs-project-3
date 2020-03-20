@@ -9,14 +9,13 @@ import Contact from "./components/pages/Contact/Contact.js";
 import Admin from "./components/pages/Admin/Admin.js";
 import Footer from "./components/Footer/Footer";
 import CustomerCreate from "./components/pages/Authentication/CustomerCreate"
+import Row from "./components/Row/index.js";
 class HomePage extends Component {
   render() {
     return (
       // <div className='container'>
         <BrowserRouter>
-
           <NavTabs />          
-
           <div>
             <Switch>
               <Route exact path="/">
@@ -40,7 +39,7 @@ class HomePage extends Component {
               <Route exact path="/Inventory">
                 <Inventory />
               </Route>          
-              <Footer />
+              {/* <Footer /> */}
             </Switch>
           </div>
           <Footer />
