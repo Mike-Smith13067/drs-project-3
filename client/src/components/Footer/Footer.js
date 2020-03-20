@@ -1,19 +1,17 @@
 import React, {Component} from 'react';
 
 const Footer = () => {
-        return (
-            <div className="footer">
-                <div className="col-footer">
-                    <div className="justify-footer-text-left">Copyright &copy; 2020</div>
-                    <div className="justify-footer-text-center">
-                        <a className="btn btn-social-icon btn-facebook" href="https://www.facebook.com/DRSAutomotiveSolutions/"></a>
-                    </div>
-                    <div className="justify-footer-text-right">
-                        <a className="nav-link" href="privacy">PRIVACY AND DATA PROTECTION</a>
+    return (
+        <div class="col-footer">
+            <div class="col-sm-12">
+                    <div class="text-center">
+                        ©2020 DRS Automtive, All rights reserved.
+                    <a className="nav-link" href="/privacy">PRIVACY AND DATA PROTECTION</a>
                     </div>
                 </div>
             </div>
-        );
-    }
-    
+    );
+}
+
+
 export default Footer;

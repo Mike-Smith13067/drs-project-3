@@ -12,8 +12,9 @@ class Form extends React.Component {
         />
         <button>Go!</button>
     	</form>
+    
     );
-  }
+}
 }
 
-module.exports = Form;
+export default Form;

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Form from '../../Form/Form'
 
 class CustomerCreate extends Component {
-    componentDidMount() { };
+    // componentDidMount() { };
     render() {
         return (
             <div>
@@ -11,4 +11,4 @@ class CustomerCreate extends Component {
         );
     }
 }
-// export default CustomerCreate;
+ export default CustomerCreate;

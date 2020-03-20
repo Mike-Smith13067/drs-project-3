@@ -8,8 +8,6 @@ import {
     NavItem,
     NavLink,
 } from 'reactstrap';
-// import Footer from "../Footer/Footer";
-
 class Navtabs extends Component {
     state = {
         isOpen: false
@@ -22,17 +20,20 @@ class Navtabs extends Component {
     }
 
     render() {
-        return (<div>
-            {/* <Footer /> */}
-            <Navbar dark expand="sm" className="col-nav">
-                
+        return (
+            <div> {/* <Footer /> */}
+                <Navbar dark expand="sm" className="col-nav">
+
                     <NavbarBrand href="/">DRS Automotive Services</NavbarBrand>
+                    <a href="https://www.facebook.com/DRSAutomotiveSolutions/">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
                     <NavbarToggler onClick={
                         this.toggle
-                    } />
+                    }/>
                     <Collapse isOpen={
-                        this.state.isOpen
-                    }
+                            this.state.isOpen
+                        }
                         navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
@@ -46,15 +47,21 @@ class Navtabs extends Component {
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/Contact">
-                                    Contact
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
                                 <NavLink href="/Customer">
                                     Customer
                                 </NavLink>
                             </NavItem>
+                            <NavItem>
+                                <NavLink href="/Authentication">
+                                    Create Account
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/Contact">
+                                    Contact
+                                </NavLink>
+                            </NavItem>
+
                             <NavItem>
                                 <NavLink href="/Inventory">
                                     Inventory
@@ -66,20 +73,15 @@ class Navtabs extends Component {
                                     Admin
                                 </NavLink>
                             </NavItem>
-                            <NavItem>
-                                <NavLink href="/Authentication">
-                                    Create Account
-                                </NavLink>
-                            </NavItem>
+
 
                         </Nav>
                     </Collapse>
-                
-            </Navbar>
-        </div>);
+
+                </Navbar>
+            </div>
+        );
     }
 }
 
 export default Navtabs;
-
-
