@@ -44,11 +44,13 @@ class HomePage extends Component {
               <Route exact path ="/WorkOrder">
               <WorkOrder />
               </Route>
-                      
-              {/* <Privacy /> */}
-            </Switch>
+              <Route exact path ="/Privacy">
+              <Privacy />
+              </Route>            
+              </Switch>
           </div>
           <Footer />
+
         </BrowserRouter>
     );
   }
