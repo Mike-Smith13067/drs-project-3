@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import "./style.css";
+import { NavLink, NavItem} from 'reactstrap';
+import {Link} from 'react-router-dom';
+
 
 class Customerpage extends Component {
   constructor(props) {
@@ -14,6 +17,8 @@ class Customerpage extends Component {
         console.log(this.state.customer);
       })
   }
+
+
   render() {
     return (
       <div>
@@ -31,18 +36,20 @@ class Customerpage extends Component {
           <tbody>
             {
               this.state.customer.map((customeritem) =>
-              <tr className="table-body" key= {customeritem._id}>
-                <td>{customeritem.name}</td>
-                <td>{customeritem.make}</td>
-                <td>{customeritem.model}</td>
-                <td>{customeritem.vin}</td>
-                <td>{customeritem.service}</td>
-                <td>{customeritem.notes}</td>
-              </tr>
+                <tr className="table-body" key={customeritem._id}>
+                  <td>{customeritem.name}</td>
+                  <td>{customeritem.make}</td>
+                  <td>{customeritem.model}</td>
+                  <td>{customeritem.vin}</td>
+                  <td>{customeritem.service}</td>
+                  <td>{customeritem.notes}</td>
+                </tr>
               )}
           </tbody>
         </table>
-        <button type="button" class="btn btn-primary">View Work History</button>
+        <Link to= "/WorkOrder">View Work Order</Link>
+
+
       </div>
     )
   }

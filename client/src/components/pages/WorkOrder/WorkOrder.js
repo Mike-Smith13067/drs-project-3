@@ -7,11 +7,12 @@ class WorkOrderpage extends Component {
     super(props);
     this.state = { workorder: [] };
   }
+  
   componentDidMount() {
-    axios.get('/customer')
+    axios.get('/workorder')
       .then(response => {
         this.setState({ workorder: response.data });
-        console.log(this.state.customer);
+        console.log(this.state.workorder);
       })
   }
   render() {
@@ -23,23 +24,25 @@ class WorkOrderpage extends Component {
               <th className="table-head" scope="col">Part</th>
               <th className="table-head" scope="col">Description</th>
               <th className="table-head" scope="col">Part #</th>
-              <th className="table-head" scope="col">Qty/Hrs</th>
-              <th className="table-head" scope="col">Price/Rate</th>
-              <th className="table-head" scope="col">Extended</th>
+              <th className="table-head" scope="col">Qty</th>
+              <th className="table-head" scope="col">Price</th>
+              <th className="table-head" scope="col">Hrs</th>
+              <th className="table-head" scope="col">Rate</th>
+              <th className="table-head" scope="col">Total</th>
             </tr>
           </thead>
           <tbody>
             {
-              this.state.customer.map((workorderitem) =>
+              this.state.workorder.map((workorderitem) =>
               <tr className="table-body" key= {workorderitem._id}>
                 <td>{workorderitem.part}</td>
                 <td>{workorderitem.description}</td>
                 <td>{workorderitem.partnumber}</td>
                 <td>{workorderitem.qty}</td>
-                <td>{workorderitem.hours}</td>
                 <td>{workorderitem.price}</td>
+                <td>{workorderitem.hrs}</td>                
                 <td>{workorderitem.rate}</td>
-                <td>{workorderitem.extended}</td>
+                <td>{workorderitem.qty*workorderitem.price+workorderitem.hrs*workorderitem.rate}</td>
               </tr>
               )}
           </tbody>

@@ -1,9 +1,11 @@
 import React, { Component } from "react";
+import {Link} from 'react-router-dom';
 
 class Admin extends Component {
   componentDidMount() {}
     render() {
       return (
+        <div>
         <table className="table">
     <thead>
       <tr>
@@ -35,11 +37,17 @@ class Admin extends Component {
         <td>@twitter</td>
       </tr>
     </tbody>
+   
   </table>
+  
+    <Link to= "/WorkOrder">Create Work Order</Link>
+  </div>
+   
+  
       ) 
       
     }
-   
+    
   
   }
 
