@@ -10,6 +10,7 @@ import Admin from "./components/pages/Admin/Admin.js";
 import Footer from "./components/Footer/Footer";
 import CustomerCreate from "./components/pages/Authentication/CustomerCreate"
 import Privacy from "./components/Footer/Privacy";
+import WorkOrder from "./components/pages/WorkOrder/WorkOrder"
 import Row from "./components/Row/index.js";
 class HomePage extends Component {
   render() {
@@ -25,7 +26,7 @@ class HomePage extends Component {
               <Route exact path="/About">
                 <About/>
               </Route>
-              <Route exact path="/Admin>">
+              <Route exact path="/Admin">
                 <Admin />
               </Route>
               <Route exact path="/Contact">
@@ -39,8 +40,12 @@ class HomePage extends Component {
               </Route>
               <Route exact path="/Inventory">
                 <Inventory />
-              </Route>          
-              <Privacy />
+              </Route> 
+              <Route exact path ="/WorkOrder">
+              <WorkOrder />
+              </Route>
+                      
+              {/* <Privacy /> */}
             </Switch>
           </div>
           <Footer />
