@@ -17,6 +17,9 @@
 } */
 
 body {
+  margin-bottom: 100px; 
+  height: 100vh; 
+  overflow: hidden; 
   font-family: 'Roboto', sans-serif;
   background:#fff;
   color: lightpink;
@@ -53,6 +56,7 @@ body {
 } */
 
 .content {
+
   position: absolute;
   top: 70px;
   right: 0px;
@@ -118,7 +122,9 @@ p {
 
 /* footer */
 .col-footer {
-  position: bottom;
+  position: absolute; 
+  bottom: 0; 
+  width: 100%; 
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: #FF7D00;
