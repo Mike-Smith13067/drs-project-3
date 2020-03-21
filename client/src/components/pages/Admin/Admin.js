@@ -1,12 +1,24 @@
 import React, { Component } from "react";
 import {Link} from 'react-router-dom';
+import Card from '../../Card/Card';
+import Row from "../../Row";
 
+const createwo = {
+  title: "Create Work Order",
+  image: null,
+  text: "Create new work order here."
+};
+const customerview = {
+  title: "View Customer",
+  image: null,
+  text: "View customer information here."
+};
 class Admin extends Component {
   componentDidMount() {}
     render() {
       return (
         <div>
-        <table className="table">
+        {/* <table className="table">
     <thead>
       <tr>
         <th scope="col">Name</th>
@@ -38,9 +50,20 @@ class Admin extends Component {
       </tr>
     </tbody>
    
-  </table>
-  
+  </table> */}
+  <Row>
+  <Card text={createwo}>
     <Link to= "/WorkOrder">Create Work Order</Link>
+    </Card>
+    <Card text={customerview}>
+    <Link to= "/WorkOrder">Create Work Order</Link>
+    </Card>
+  </Row>
+  <Row>
+  
+  </Row>
+    
+    
   </div>
    
   
