@@ -30,13 +30,6 @@ router.route('/add').post((req, res) => {
         .then(() => res.json(400).json('Error: ' + err));
 });
 
-//Delete an inventory item
-router.route('/id').delete((req, res) => {
-    workorder.findById(re.params.id)
-        .then(() => res.json('Work Order deleted.'))
-        .catch(err => res.status(400).json('Error: ' + err));
-});
-
 //Modify current workorder item
 router.route('/update/:id').post(() => {
     workorder.findById(req.params.id)

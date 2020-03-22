@@ -30,12 +30,17 @@
   "homepage": "https://github.com/Mike-Smith13067/drs-project-3#readme",
   "dependencies": {
     "axios": "^0.19.2",
+    "connect-flash": "^0.1.1",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "express": "^4.17.1",
+    "express-session": "^1.17.0",
     "if-env": "^1.0.4",
     "minimist": "^1.2.5",
     "mongoose": "^5.9.3",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "react-calendar": "^3.0.0",
     "reactstrap": "^8.4.1"
   }

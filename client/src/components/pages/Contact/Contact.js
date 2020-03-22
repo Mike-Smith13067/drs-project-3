@@ -1,3 +1,4 @@
+
 // Customize this 'myform.js' script and add it to your JS bundle.
 // Then import it with 'import MyForm from "./myform.js"'.
 // Finally, add a <MyForm/> element whereever you wish to display the form.
@@ -30,7 +31,9 @@ export default class MyForm extends React.Component {
         {status === "ERROR" && <p>Ooops! There was an error.</p>}
       </form>
     );
+
   }
+
 
   submitForm(ev) {
     ev.preventDefault();
@@ -51,3 +54,4 @@ export default class MyForm extends React.Component {
     xhr.send(data);
   }
 }
+

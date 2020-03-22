@@ -52,7 +52,12 @@ class Navtabs extends Component {
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/Authentication">
+                                <NavLink href="/Login">
+                                    Login
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/CreateCustomer">
                                     Create Account
                                 </NavLink>
                             </NavItem>

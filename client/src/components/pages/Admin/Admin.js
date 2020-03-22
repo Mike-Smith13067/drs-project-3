@@ -1,23 +1,28 @@
 import React, { Component } from "react";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Card from '../../Card/Card';
 import Row from "../../Row";
 
 const createwo = {
   title: "Create Work Order",
   image: null,
-  text: "Create new work order here."
+  text: <Link to="/WorkOrder/create">Create Work Order</Link>
+};
+const updatewo = {
+  title: "Update Work Order",
+  image: null,
+  text: <Link to="/WorkOrder/update">Update Work Order</Link>
 };
 const customerview = {
   title: "View Customer",
   image: null,
-  text: "View customer information here."
+  text: <Link to="/WorkOrder">View Customer</Link>
 };
 class Admin extends Component {
-  componentDidMount() {}
-    render() {
-      return (
-        <div>
+  componentDidMount() { }
+  render() {
+    return (
+      <div>
         {/* <table className="table">
     <thead>
       <tr>
@@ -51,27 +56,26 @@ class Admin extends Component {
     </tbody>
    
   </table> */}
-  <Row>
-  <Card text={createwo}>
-    <Link to= "/WorkOrder">Create Work Order</Link>
-    </Card>
-    <Card text={customerview}>
-    <Link to= "/WorkOrder">Create Work Order</Link>
-    </Card>
-  </Row>
-  <Row>
-  
-  </Row>
-    
-    
-  </div>
-   
-  
-      ) 
-      
-    }
-    
-  
+        <Row>
+          <Card text={createwo}>
+          </Card>
+          <Card text={customerview}>
+          </Card>
+        </Row>
+        <Row>
+          <Card text={updatewo}>
+          </Card>
+        </Row>
+
+
+      </div>
+
+
+    )
+
   }
 
-  export default Admin;
+
+}
+
+export default Admin;

@@ -10,6 +10,7 @@ import Admin from "./components/pages/Admin/Admin.js";
 import Footer from "./components/Footer/Footer";
 import CustomerCreate from "./components/pages/Authentication/CustomerCreate"
 import Privacy from "./components/Footer/Privacy";
+import Login from "./components/pages/Login";
 import WorkOrder from "./components/pages/WorkOrder/WorkOrder"
 import Row from "./components/Row/index.js";
 
@@ -36,8 +37,11 @@ class HomePage extends Component {
               <Route exact path="/Customer">
                 <Customer />
               </Route>
-              <Route exact path="/Authentication">
+              <Route exact path="/CreateCustomer">
                 <CustomerCreate />
+              </Route>
+              <Route exact path="/Login">
+                <Login />
               </Route>
               <Route exact path="/Inventory">
                 <Inventory />

@@ -1,10 +1,18 @@
 const express = require ("express");
 const mongoose = require ("mongoose");
+const morgan = require('morgan');
 const app = express ();
+const passport = require('passport');
+const flash = require('connect-flash');
 const PORT = process.env.PORT || 3001;
 const cors = require('cors');
 
 app.use(cors());
+app.use(morgan("dev"));
+app.use(require('express-session')({secret: 'keyboard-cat', resave: false, saveUninitialized: false}));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
 app.use(express.static("public"))
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
@@ -17,6 +25,9 @@ app.use('/customer', customerRouter)
 
 const workorderRouter = require('./routes/workorder/workorder');
 app.use('/workorder', workorderRouter)
+
+const authRouter = require('./routes/authRouter');
+app.use('/auth', authRouter);
 
 // const apiroutes = require("./routes/apiroutes")
 // apiroutes(app)

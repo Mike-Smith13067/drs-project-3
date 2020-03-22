@@ -21,7 +21,7 @@ class WorkOrderpage extends Component {
         <table className="table">
           <thead>
             <tr>
-              <th className="table-head" scope="col">Part</th>
+              <th className="table-head" scope="col">Type</th>
               <th className="table-head" scope="col">Description</th>
               <th className="table-head" scope="col">Part #</th>
               <th className="table-head" scope="col">Qty</th>
@@ -35,7 +35,7 @@ class WorkOrderpage extends Component {
             {
               this.state.workorder.map((workorderitem) =>
               <tr className="table-body" key= {workorderitem._id}>
-                <td>{workorderitem.part}</td>
+                <td>{workorderitem.type}</td>
                 <td>{workorderitem.description}</td>
                 <td>{workorderitem.partnumber}</td>
                 <td>{workorderitem.qty}</td>

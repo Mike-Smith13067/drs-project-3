@@ -33,14 +33,6 @@
 
 
 
-//     app.delete("/api/customers/delete/:id", function(req, res) {
-//         db.Customer.findOneAndRemove({_id:req.params.id}).then(function(data) {
-//            res.json(data)
-//         }).catch(function(err){
-//             res.json(err);
-//         });
-       
-//     });
 
 //     // Admin routes
 
