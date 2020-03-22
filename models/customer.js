@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 
 const customerSchema = new Schema({
   name: { type: String, required: true },
- 
+  email: {type: String, required: true}, 
   hashed_password: {type: String, required: "Password is required"},
   salt: String, updated: Date, created: {type: Date, default: Date.now},
  
@@ -14,14 +14,15 @@ const customerSchema = new Schema({
   vin: String,
   mileage: String,
   lastSereviceDate: { type: Date, default: Date.now },
-  notes: String
+  notes: String,
+  admin: false
 
 })
 
 customerSchema
 .virtual('password')
-.set(function(pasword) {
-this._password = this._password
+.set(function(password) {
+this._password = password
 this.salt = this.makeSalt()
 this.hashed_password = this.encryptPassword(password)
 })
