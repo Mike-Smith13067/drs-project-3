@@ -1,39 +1,53 @@
+// Customize this 'myform.js' script and add it to your JS bundle.
+// Then import it with 'import MyForm from "./myform.js"'.
+// Finally, add a <MyForm/> element whereever you wish to display the form.
+
 import React from "react";
-import Calendar from "react-calendar";
 
-class Card extends React.Component {
-  render() {
-    return(
-        <div className="card">
-          <img src={this.props.img} />
-          <div className="card-body">
-            <h2>{this.props.title}</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-            <h5>{this.props.author}</h5>
-          </div>
-        </div>
-    )
+export default class MyForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.submitForm = this.submitForm.bind(this);
+    this.state = {
+      status: ""
+    };
   }
-}
 
-class App extends React.Component {
   render() {
+    const { status } = this.state;
     return (
-      <>
-       <div class="header">
-         <h1>React Card Component</h1>
-         <h3>A simple and responsive card component in React with clean hover effects. Copy and customise.</h3>
-       </div>
-      
-       <div className='cards'>
-         <Card
-          img='https://picsum.photos/id/54/400/300'
-          title='What I learned from my visit to The Upside Down'
-          author='Nancy Wheeler' />
-      </div>  
-      </>
-    )
+      <form
+        onSubmit={this.submitForm}
+        action="https://formspree.io/mjvoaqoq"
+        method="POST"
+      >
+        {/* <!-- add your custom form HTML here --> */}
+        <label>Email:</label>
+        <input type="email" name="email" />
+        <label>Message:</label>
+        <input type="text" name="message" />
+        {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
+        {status === "ERROR" && <p>Ooops! There was an error.</p>}
+      </form>
+    );
+  }
+
+  submitForm(ev) {
+    ev.preventDefault();
+    const form = ev.target;
+    const data = new FormData(form);
+    const xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        form.reset();
+        this.setState({ status: "SUCCESS" });
+      } else {
+        this.setState({ status: "ERROR" });
+      }
+    };
+    xhr.send(data);
   }
 }
-
-export default Card; 
