@@ -12,6 +12,7 @@ import CustomerCreate from "./components/pages/Authentication/CustomerCreate"
 import Privacy from "./components/Footer/Privacy";
 import WorkOrder from "./components/pages/WorkOrder/WorkOrder"
 import Row from "./components/Row/index.js";
+
 class HomePage extends Component {
   render() {
     return (
