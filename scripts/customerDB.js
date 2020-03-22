@@ -11,12 +11,14 @@ mongoose.connect(
 const customer = [
   {
     name: "Mike Smith",
+    email: "Hockeydad66@live.com",
     make: "Jeep",
     model: "Wrangler X",
     vin: "XXXX",
     mileage: "XXXXX",
     lastServiceDate: "1/16/2020",
-    notes: "Best Customer Ever!!"
+    notes: "Best Customer Ever!!",
+    admin: true
     },
 ];
 
