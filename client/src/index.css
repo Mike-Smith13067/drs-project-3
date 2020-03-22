@@ -120,23 +120,34 @@ p {
   color: #333;
 }
 
+
 /* footer */
+
+.text-center {
+  padding-top: .15em;
+  padding-bottom: .25em
+}
 .col-footer {
   position: absolute; 
   bottom: 0; 
   width: 100%; 
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 5px;
+  padding-bottom: 10px;
   background-color: #FF7D00;
-  font-size: .95rem;
+  font-size: .85rem;
   color: white;
+  height: 4em ;
 }
+
 
 /* Privacy */
 
 .privacy {
-  width: 60%;
-  margin-left: 5em;
+  width: 100%;
+  color: black;
+  padding-top: .25em;
+  padding-bottom: .25em
+
 }
 
 .privacy h1{

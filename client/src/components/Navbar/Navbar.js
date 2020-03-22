@@ -36,11 +36,11 @@ class Navtabs extends Component {
                         }
                         navbar>
                         <Nav className="ml-auto" navbar>
-                            <NavItem>
+                            {/* <NavItem>
                                 <NavLink href="/">
                                     Home
                                 </NavLink>
-                            </NavItem>
+                            </NavItem> */}
                             <NavItem>
                                 <NavLink href="/About">
                                     About

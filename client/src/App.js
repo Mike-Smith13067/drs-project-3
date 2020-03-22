@@ -13,6 +13,7 @@ import Privacy from "./components/Footer/Privacy";
 import Login from "./components/pages/Login";
 import WorkOrder from "./components/pages/WorkOrder/WorkOrder"
 import Row from "./components/Row/index.js";
+
 class HomePage extends Component {
   render() {
     return (
@@ -48,11 +49,13 @@ class HomePage extends Component {
               <Route exact path ="/WorkOrder">
               <WorkOrder />
               </Route>
-                      
-              {/* <Privacy /> */}
-            </Switch>
+              <Route exact path ="/Privacy">
+              <Privacy />
+              </Route>            
+              </Switch>
           </div>
           <Footer />
+
         </BrowserRouter>
     );
   }
