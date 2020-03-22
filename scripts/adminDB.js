@@ -10,32 +10,18 @@ mongoose.connect(
 
 const admin = [
   {
-    name: {
-        type: String,
-        trim: true,
-        required: 'Name is required'
-      },
-      password: {
-        type: String,
-        trim: true,
-        required: 'Password is required'
-      },
-      make: {
-        type: String
-      },
-      model: {
-        type: String
-      },
-      vin: {
-        type: String
-      },
-      service: new Date(Date.now()),
-      notes: {
-        type: String
-      },
-      admin: true
+    name: "Wayne Smith",
+    email: "dwsmith600@gmail.com",
+    make: "",
+    model: "",
+    vin: "XXXX",
+    mileage: "XXXXX",
+    lastServiceDate: "1/16/2020",
+    notes: "Best Owner Ever!!",
+    admin: true
     },
 ];
+
 
 db.Admin
 db.Admin.collection.insert(admin)
