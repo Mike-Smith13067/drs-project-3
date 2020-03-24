@@ -94,6 +94,7 @@ class Home extends Component {
           if (counter < 0) {
               counter = 6
           }
+
           var imageArray = [
               image0,
               image1,
@@ -126,7 +127,6 @@ class Home extends Component {
           var currentImage = document.getElementById("current-image");
           currentImage.setAttribute("src", image);
           console.log(image);
-        
 
           var currentSubheader = document.getElementById("subheader");
           currentSubheader.innerHTML = "";
