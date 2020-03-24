@@ -1,9 +1,19 @@
-import React from "react";
+import React, { Component } from "react";
 
-function Column(props) {
-  const size = props.size.split(" ").map(size => "col-" + size).join(" ");
-
-  return <div className={size} {...props} />;
+class Column extends Component {
+render () {
+    return (
+<div>
+<div className="container">
+    <div className="row">
+        <div className="col-lg"></div>
+    </div>
+</div>
+</div>
+    );
 }
+}
+
+
 
 export default Column;

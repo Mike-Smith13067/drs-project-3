@@ -15,7 +15,13 @@ const customerSchema = new Schema({
   mileage: String,
   lastSereviceDate: { type: Date, default: Date.now },
   notes: String,
-  admin: false
+  admin: Boolean,
+  workOrders: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "WorkOrder"
+    }
+  ]
 
 })
 

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Form from '../../Form/Form';
+import WorkOrderCreate from '../../Form/WorkOrderCreate';
 import Column from '../../Column/Column';
 import Row from '../../Row'
 
 
-class CustomerCreate extends Component {
+class WOrkOrderCreate extends Component {
     // componentDidMount() { };
     render() {
         return (
@@ -12,7 +12,7 @@ class CustomerCreate extends Component {
                 <Row>
                 <Column></Column>
                 <Column></Column>            
-                <Form />
+                <WorkOrderCreate/>
                 <Column></Column>
                 <Column></Column>
                 </Row>
@@ -21,4 +21,4 @@ class CustomerCreate extends Component {
         );
     }
 }
- export default CustomerCreate;
+ export default WorkOrderCreate;

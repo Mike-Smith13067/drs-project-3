@@ -6,12 +6,12 @@ import Row from "../../Row";
 const createwo = {
   title: "Create Work Order",
   image: null,
-  text: <Link to="/WorkOrder/create">Create Work Order</Link>
+  text: <Link to="/Admin/WorkOrderCreate">Create Work Order</Link>
 };
 const updatewo = {
   title: "Update Work Order",
   image: null,
-  text: <Link to="/WorkOrder/update">Update Work Order</Link>
+  text: <Link to="/Admin/WorkOrderUpdate">Update Work Order</Link>
 };
 const customerview = {
   title: "View Customer",
@@ -61,10 +61,11 @@ class Admin extends Component {
           </Card>
           <Card text={customerview}>
           </Card>
-        </Row>
-        <Row>
           <Card text={updatewo}>
           </Card>
+        </Row>
+        <Row>
+          
         </Row>
 
 

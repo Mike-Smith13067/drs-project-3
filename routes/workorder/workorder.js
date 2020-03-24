@@ -8,26 +8,42 @@ router.route('/').get((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-//Add new workorder item to database
+//Add new workorder item to database and link to a specific customer
 router.route('/add').post((req, res) => {
-    const type = req.body.type;
-    const description = req.body.description;
-    const partnumber = req.body.partnumber;
-    const qty = req.body.qty;
-    const hrs = req.body.hrs;
-    const price = req.body.price;
-    const rate = req.body.rate;
-    const newWorkorder = new Workorder({
-        type,
-        description,
-        partnumber,
-        qty,
-        hrs,
-        price,
-        rate,
-    });
-    newWorkorder.save()
-        .then(() => res.json(400).json('Error: ' + err));
+    console.log(req.user);
+    db.Customer.findOne({ email: req.body.email })
+        .then(customerObj => {
+            if (customerObj) {
+                const customer = customerObj._id;
+                const type = req.body.type;
+                const description = req.body.description;
+                const partnumber = req.body.partnumber;
+                const qty = req.body.qty;
+                const hrs = req.body.hrs;
+                const price = req.body.price;
+                const rate = req.body.rate;
+                const newWorkorder = new Workorder({
+                    type,
+                    description,
+                    partnumber,
+                    qty,
+                    hrs,
+                    price,
+                    rate,
+                    customer
+                });
+                newWorkorder.save()
+                    .then(() => res.json(400).json('Error: ' + err));
+                db.Customer.findOneAndUpdate({ email: req.body.email }, {
+                    $push: {
+                        workOrders: newWorkerder._id
+                    }
+                })
+            } else {
+                res.json(400).json('Error: ' + err);
+            }
+        })
+
 });
 
 //Modify current workorder item

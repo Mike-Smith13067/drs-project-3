@@ -8,7 +8,7 @@ router.route('/').get((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-//Add new invenotory item to database
+//Add new inventory item to database
 router.route('/add').post((req, res) => {
     const partnumber = req.body.partnumber;
     const name = req.body.name;
