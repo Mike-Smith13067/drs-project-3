@@ -141,7 +141,32 @@ p {
   fill-opacity: 50%;
   margin: 1em 1em 2em 1em;
   outline-style: none;
+  border-color: black
 }
+
+.input-box-email {
+  border-width: 3px;
+  height: 3em;
+  width: 25em;
+  font-size: 1em
+}
+
+.input-box-name {
+  border-width: 3px;
+  height: 3em;
+  width: 25em;
+  font-size: 1em
+}
+
+.input-box-msg {
+  border-width: 3px;
+  height: 3em;
+  width: 80em;
+  font-size: 1em;
+  /* text-overflow: clip;
+  word-break: normal; */
+}
+
 
 /* footer */
 

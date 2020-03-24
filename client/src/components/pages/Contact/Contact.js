@@ -23,13 +23,13 @@ export default class MyForm extends React.Component {
                 <col-sm-12/>
                 <hr/>
                 <label className="label">Your Email:</label>
-                <input type="email" name="email"/>
+                <input class="input-box-email" type="email" name="email"/>
                 <hr/>
                 <label className="label">Your Name:</label>
-                <input type="text" name="_replyto"></input>
+                <input class="input-box-name"type="text" name=""></input>
                 <hr/>
                 <label className="label">Message & Contact Info:</label>
-                <input type="text" name="message" />
+                <input class="input-box-msg" textarea="break-word" type="text" name="message" />
                 <hr/> {
                 status === "SUCCESS" ? <p>Thanks!</p> : <input className="btn btn-primary" type="submit" value="Submit" />
             }
