@@ -1,7 +1,3 @@
-.create-customer {
-    position: center;
-}
-
-.formtext {
-    width: 33%;
+form-container {
+    border: solid black 5px;
 }

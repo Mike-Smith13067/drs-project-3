@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 // import test from ./images"
-const image0 = require("../../../assets/images/image013.jpg")
+const image0 = require("../../../assets/images/image0.jpg")
 const image1 = require("../../../assets/images/image1.jpg")
 const image2 = require("../../../assets/images/image2.jpg")
 const image3 = require("../../../assets/images/image3.jpg")
@@ -122,6 +122,7 @@ class Home extends Component {
           var image = imageArray[counter];
           var subheader = h2Array[counter];
           var subtext = pArray[counter];
+          console.log(counter);
 
 
           var currentImage = document.getElementById("current-image");
@@ -168,7 +169,7 @@ class Home extends Component {
                 <div className="slider">
                     <div className="slide current">
                         <img src={
-                                    require("../../../assets/images/image013.jpg")
+                                    require("../../../assets/images/image0.jpg")
                                 }
                                 width="100%"
                                 alt="drs-logo"

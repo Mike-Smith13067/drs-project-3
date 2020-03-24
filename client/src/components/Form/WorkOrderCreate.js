@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Row from '../Row';
 import axios from 'axios';
 
-class Form extends Component {
+class Workorder extends Component {
   state = {
     name : "",
     email : "",
@@ -22,54 +22,54 @@ class Form extends Component {
   }
   handleSubmit  = (event) => {
     event.preventDefault();
-    axios.post("/customer/create", {...this.state}) 
+    axios.post("/add", {...this.state}) 
 
   }
 render (){
   return (
     <container className="form-container">
       <form className="create-customer">
-        <span className="text">New Customer Registration</span>
+        <span className="text">New Workorder</span>
         <Row>
           <input class="input"
             type="text"
-            placeholder="Enter your full name"
+            placeholder="Enter item type (Part/Time)"
             required
-            name="name"
+            name="type"
             onChange={this.handleChange}
           />
         </Row>
         <Row>
           <input
             type="text"
-            placeholder="Enter a valid email"
+            placeholder="Enter part description"
             required
-            name="email"
+            name="description"
             onChange={this.handleChange}
           />
         </Row>
         <Row>
           <input
             type="text"
-            placeholder="Enter vehicle make"
+            placeholder="Enter a partnumber"
             required
-            name="make"
+            name="partnumber"
             onChange={this.handleChange}
           />
         </Row>
         <Row>
           <input
             type="text"
-            placeholder="Enter a vehicle model"
+            placeholder="Enter quantity"
             required
-            name="model"
+            name="qty"
             onChange={this.handleChange}
           />
         </Row>
         <Row>
           <input
             type="text"
-            placeholder="Enter the vehicles VIN#"
+            placeholder="Enter price"
             required
             name="vin"
             onChange={this.handleChange}
@@ -78,32 +78,32 @@ render (){
         <Row>
           <input
             type="text"
-            placeholder="Enter the vehicle's current mileage"
+            placeholder="Enter hour(s)"
             required
-            name="mileage"
+            name="hrs"
             onChange={this.handleChange}
           />
         </Row>
         <Row>
           <input
             type="text"
-            placeholder="Enter the date of last vehicle service"
+            placeholder="Enter hourly rate"
             required
-            name="lastServiceDate"
+            name="rate"
             onChange={this.handleChange}
           />
         </Row>
         <Row>
           <input
             type="text"
-            placeholder="Enter a password for this account"
+            placeholder="Enter any comments, observations or notes"
             required
-            name="password"
+            name="notes"
             onChange={this.handleChange}
           />
         </Row>
         <Row>
-          <button onClick = {this.handleSubmit}>Submit new account.</button>
+          <button onClick = {this.handleSubmit}>Submit new workorder.</button>
         </Row>
       </form>
     </container>
@@ -112,4 +112,4 @@ render (){
 }
 }
 
-export default Form;
+export default Workorder;

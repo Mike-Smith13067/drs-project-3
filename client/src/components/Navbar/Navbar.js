@@ -8,9 +8,20 @@ import {
     NavItem,
     NavLink,
 } from 'reactstrap';
+import axios from 'axios';
 class Navtabs extends Component {
     state = {
-        isOpen: false
+        isOpen: false,
+        isAdmin: false
+    }
+
+    componentDidMount(){
+        axios.get('/auth/isadmin')
+            .then(res => {
+                if(res.status === 200){
+                    this.setState({isAdmin: true})
+                }
+            });
     }
 
     toggle = () => {
@@ -26,7 +37,7 @@ class Navtabs extends Component {
 
                     <NavbarBrand href="/">DRS Automotive Services</NavbarBrand>
                     <a href="https://www.facebook.com/DRSAutomotiveSolutions/">
-                        <i class="fab fa-facebook fa-2x"></i>
+                        <i className="fab fa-facebook fa-2x"></i>
                     </a>
                     <NavbarToggler onClick={
                         this.toggle
@@ -41,16 +52,22 @@ class Navtabs extends Component {
                                     Home
                                 </NavLink>
                             </NavItem> */}
+                            {this.state.isAdmin ? <NavItem>
+                                <NavLink href="/Admin">
+                                    Admin
+                                </NavLink>
+                            </NavItem> : <NavItem><NavLink href="/">Home</NavLink></NavItem>}
+                            {this.state.isAuthenticated ? <NavItem>
+                                <NavLink href="/Customer">
+                                    Customer
+                                </NavLink>
+                            </NavItem> : <div></div>}
                             <NavItem>
                                 <NavLink href="/About">
                                     About
                                 </NavLink>
                             </NavItem>
-                            <NavItem>
-                                <NavLink href="/Customer">
-                                    Customer
-                                </NavLink>
-                            </NavItem>
+                            
                             <NavItem>
                                 <NavLink href="/Login">
                                     Login
@@ -73,11 +90,7 @@ class Navtabs extends Component {
                                 </NavLink>
                             </NavItem>
 
-                            <NavItem>
-                                <NavLink href="/Admin">
-                                    Admin
-                                </NavLink>
-                            </NavItem>
+                            
 
 
                         </Nav>

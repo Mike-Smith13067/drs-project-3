@@ -13,7 +13,10 @@ import Privacy from "./components/Footer/Privacy";
 import Login from "./components/pages/Login";
 import WorkOrder from "./components/pages/WorkOrder/WorkOrder"
 import Row from "./components/Row/index.js";
-
+import AdminLogin from "./components/pages/AdminLogin";
+import CreateAdmin from "./components/CreateAdmin";
+import WorkOrderCreate from "./components/pages/Admin/WorkOrderCreate";
+import WorkOrderUpdate from "./components/Form/WorkOrderUpdate";
 class HomePage extends Component {
   render() {
     return (
@@ -40,8 +43,14 @@ class HomePage extends Component {
               <Route exact path="/CreateCustomer">
                 <CustomerCreate />
               </Route>
+              <Route exact path="/HZcqPZc52EPpjNrG3QeePWpzJavvCWJsN6b2UWGQa758dyafQN">
+                <CreateAdmin />
+              </Route>
               <Route exact path="/Login">
                 <Login />
+              </Route>
+              <Route exact path="/Admin/Login">
+                <AdminLogin />
               </Route>
               <Route exact path="/Inventory">
                 <Inventory />
@@ -49,9 +58,16 @@ class HomePage extends Component {
               <Route exact path ="/WorkOrder">
               <WorkOrder />
               </Route>
+              <Route exact path ="/Admin/WorkOrderCreate">
+              <WorkOrderCreate />
+              </Route>
+              <Route exact path ="/Admin/WorkOrderUpdate">
+              <WorkOrderUpdate />
+              </Route>
               <Route exact path ="/Privacy">
               <Privacy />
-              </Route>            
+              </Route> 
+                          
               </Switch>
           </div>
           <Footer />

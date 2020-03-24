@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Row from '../Row';
 import axios from 'axios';
 
-class Form extends Component {
+class CreateAdmin extends Component {
   state = {
     name : "",
     email : "",
@@ -22,16 +22,16 @@ class Form extends Component {
   }
   handleSubmit  = (event) => {
     event.preventDefault();
-    axios.post("/customer/create", {...this.state}) 
+    axios.post("/auth/admin/create", {...this.state}) 
 
   }
 render (){
   return (
     <container className="form-container">
       <form className="create-customer">
-        <span className="text">New Customer Registration</span>
+        <span className="formtext">&#x3C;New Customer Registration /&#x3E;</span>
         <Row>
-          <input class="input"
+          <input
             type="text"
             placeholder="Enter your full name"
             required
@@ -112,4 +112,4 @@ render (){
 }
 }
 
-export default Form;
+export default CreateAdmin;

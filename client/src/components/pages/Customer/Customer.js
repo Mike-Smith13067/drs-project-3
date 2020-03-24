@@ -11,13 +11,12 @@ class Customerpage extends Component {
     this.state = { customer: [] };
   }
   componentDidMount() {
-    axios.get('/customer')
+    axios.get('/update/id')
       .then(response => {
         this.setState({ customer: response.data });
-        console.log(this.state.customer);
       })
+      
   }
-
 
   render() {
     return (
