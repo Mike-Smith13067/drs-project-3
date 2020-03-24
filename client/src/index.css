@@ -120,6 +120,28 @@ p {
   color: #333;
 }
 
+/* About */
+.col-sm {
+  width: 200px;
+  height: 400px;
+}
+
+/* Contact */
+.contact-h1 {
+  color: black;
+  margin: 1em 0em 0em .3em;
+}
+
+.label {
+  color: black;
+  margin: 1em 1em 2em 1em;
+}
+
+.btn-primary {
+  fill-opacity: 50%;
+  margin: 1em 1em 2em 1em;
+  outline-style: none;
+}
 
 /* footer */
 

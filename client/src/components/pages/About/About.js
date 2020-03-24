@@ -14,7 +14,7 @@ const bio = {
 };
 const casey = {
     title: "Head of security and Customer Welcome",
-    image: "",
+    image: <img width="100%" height="260em" src={require("../../../assets/images/casey.png")} />,
     text: ""
 };
 const churchAndSnook = {
