@@ -31,7 +31,7 @@ render (){
       <form className="create-customer">
         <span className="text">New Customer Registration</span>
         <Row>
-          <input class="input"
+          <input class="input-name"
             type="text"
             placeholder="Enter your full name"
             required
@@ -40,7 +40,7 @@ render (){
           />
         </Row>
         <Row>
-          <input
+          <input class="input-name"
             type="text"
             placeholder="Enter a valid email"
             required
@@ -49,7 +49,7 @@ render (){
           />
         </Row>
         <Row>
-          <input
+          <input class="input-name"
             type="text"
             placeholder="Enter vehicle make"
             required
@@ -58,7 +58,7 @@ render (){
           />
         </Row>
         <Row>
-          <input
+          <input class="input-name"
             type="text"
             placeholder="Enter a vehicle model"
             required
@@ -67,7 +67,7 @@ render (){
           />
         </Row>
         <Row>
-          <input
+          <input class="input-name"
             type="text"
             placeholder="Enter the vehicles VIN#"
             required
@@ -76,7 +76,7 @@ render (){
           />
         </Row>
         <Row>
-          <input
+          <input class="input-name"
             type="text"
             placeholder="Enter the vehicle's current mileage"
             required
@@ -85,7 +85,7 @@ render (){
           />
         </Row>
         <Row>
-          <input
+          <input class="input-name"
             type="text"
             placeholder="Enter the date of last vehicle service"
             required
@@ -94,7 +94,7 @@ render (){
           />
         </Row>
         <Row>
-          <input
+          <input class="input-name"
             type="text"
             placeholder="Enter a password for this account"
             required
@@ -103,7 +103,7 @@ render (){
           />
         </Row>
         <Row>
-          <button onClick = {this.handleSubmit}>Submit new account.</button>
+          <button className="btn-primary" onClick = {this.handleSubmit}>Submit new account.</button>
         </Row>
       </form>
     </container>

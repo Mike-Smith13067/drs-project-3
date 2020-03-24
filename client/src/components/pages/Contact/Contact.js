@@ -29,9 +29,9 @@ export default class MyForm extends React.Component {
                 <input class="input-box-name"type="text" name=""></input>
                 <hr/>
                 <label className="label">Message & Contact Info:</label>
-                <input class="input-box-msg" textarea="break-word" type="text" name="message" />
+                <input class="input-box-msg" type="text" name="message" />
                 <hr/> {
-                status === "SUCCESS" ? <p>Thanks!</p> : <input className="btn btn-primary" type="submit" value="Submit" />
+                status === "SUCCESS" ? <p>Thanks!</p> : <input className="btn-primary" type="submit" value="Submit" />
             }
                 {
                 status === "ERROR" && <p>Ooops! There was an error.</p>
