@@ -1,6 +1,13 @@
 
-.card-text {
-    color: red;
-    background-color: green;
+.col-md-12 {
+  height: 300px; 
+  width: 75%; 
+}
+.container {
+    align-content: center; 
+    justify-content: center; 
 }
 
+.col-md-4 {
+    margin-bottom: 50px; 
+}
