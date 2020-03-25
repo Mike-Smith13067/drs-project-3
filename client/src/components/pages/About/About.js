@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Card from "../../Card/Card";
 import Row from "../../Row";
+import './style.css'
 
 const Image = require("./images/churchandsnook.jpg")
 const missionStatement = {
@@ -30,18 +31,17 @@ class About extends Component {
         return (
             <div className="container">
                 <Row>
-                    <div className="col-sm">
+                    <div className="col-md-12">
                         <Card text={bio}/>
                     </div>
-                    <div className="col-sm">
+                    <div className="col-md-4">
                         <Card text={missionStatement}/>
                     </div>
-                    <div className="col-sm">
+                    <div className="col-md-4">
                         <Card text={casey}/>
                     </div>
-                    <div className="col-sm">
+                    <div className="col-md-4">
                         <Card text={churchAndSnook}/>
-                        <div className="col-sm"></div>
                     </div>
                 </Row>
             </div>
