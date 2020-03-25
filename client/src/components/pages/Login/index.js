@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input, Fade  } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Fade, Col, Container, Row  } from 'reactstrap';
 import _ from 'lodash';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
  
 const validationMethods =  {
     required : (field, value) => {
@@ -107,11 +108,14 @@ export default class Login extends Component {
  
     render() {
         return (
-            <div className="container">
+            <Container>
+                <Row>
+                <Col sm="12" md={{ size: 6, offset: 3 }}>
+                    <h1 className="login-h1">Login</h1>
                 <Form id="loginForm" method="post" onSubmit={this.login}>
                     <FormGroup>
-                        <Label for="email">Email</Label>
-                        <Input
+                        <Label className="login-label-name" for="email">Email</Label>
+                        <Input className="login-email"
                             type="text"
                             validations={['required','isEmail']}
                             name="email"
@@ -123,8 +127,8 @@ export default class Login extends Component {
                       <FromValidationError field={this.state.errors.email} />
                     </FormGroup>
                     <FormGroup>
-                        <Label for="password">Password</Label>
-                        <Input
+                        <Label className="login-label-password" for="password">Password</Label>
+                        <Input className="login-password"
                             type="password"
                             validations={['required']}
                             name="password"
@@ -135,9 +139,11 @@ export default class Login extends Component {
                         />
                         <FromValidationError field={this.state.errors.password} />
                     </FormGroup>
-                    <Button>login</Button>
+                    <Button color="primary" size="sm">Login</Button>
                 </Form>
-            </div>
+                </Col>
+                </Row>
+            </Container>
         );
     }
 }

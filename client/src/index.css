@@ -117,34 +117,59 @@ p {
 }
 
 .buttons button:hover {
-  background-color: #fff;
+  background-color: rgb(80, 5, 5);
   color: #333;
+}
+
+/* Login */
+.container {
+  padding-left: 50px;
+}
+.login-h1 {
+  font-size: 1.5em;
+  color: black;
+  margin: 1em 0em 0em -9.5em;
+}
+
+.login-label-name {
+  color: black;
+  margin: 1em 0em 0em -7em;
+  font-size: 1.25em;
+}
+
+.login-email {
+  color: black;
+  margin: .5em -0em 1em -9em;
+  font-size: 1em;
+}
+
+.login-label-password {
+  color: black;
+  margin: 1em 0em 0em -7em;
+  font-size: 1.25em;
+}
+
+.login-password {
+  color: black;
+  margin: .5em 1em 1em -9em;
+  font-size: 1em;
 }
 
 /* Create Account */
 .create-customer {
-    font-size: 2em;
+    font-size: 1.5em;
     color: black;
-    margin: 1em 0em 0em 1em;
+    margin: 1em 0em 0em 2em;
   }
 
   .input-name {
     border-width: 3px;
-    margin: .5em 0em 0em 2em;
+    margin: .5em 3em 0em 4em;
     height: 2em;
     width: 25em;
     font-size: .75em;
     border-radius: .5em;
   }
-
-  .btn-primary {
-    margin: 1em 1em 2em 1em;
-    outline-style: none;
-    border-color: black;
-    border-radius: .5em;
-    font-size: .65em;
-  }
-  
 
 /* About */
 .col-sm {
@@ -154,22 +179,14 @@ p {
 
 /* Contact */
 .contact-h1 {
-  font-size: 2em;
+  font-size: 1.5em;
   color: black;
-  margin: 1em 0em 0em 1em;
+  margin: 1em 0em 0em 1.70em;
 }
 
 .label {
   color: black;
-  margin: .5em 1em 1em 3em;
-}
-
-.btn-primary {
-  margin: 1em 1em 2em 1em;
-  outline-style: none;
-  border-color: black;
-  border-radius: .3em;
-  font-size: .85em
+  margin: .5em 1em 1em 5em;
 }
 
 .input-box-email {
@@ -178,6 +195,7 @@ p {
   width: 25em;
   font-size: 1em;
   border-radius: .5em;
+  margin: .5em 1em 1em 5.5em;
 }
 
 .input-box-name {
@@ -186,13 +204,13 @@ p {
   width: 25em;
   font-size: 1em;
   border-radius: .5em;
-  margin: .5em 1em 1em 1em;
+  margin: .5em 1em 1em 5.5em;
 }
 
 .input-box-msg {
   border-width: 3px;
   height: 2.5em;
-  width: 80em;
+  width: 50em;
   font-size: 1em;
   border-radius: .5em;
   /* text-overflow: clip;
