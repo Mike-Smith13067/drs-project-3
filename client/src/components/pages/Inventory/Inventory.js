@@ -3,35 +3,20 @@ import ReactDOM from "react-dom";
 import Row from '../../Row';
 import axios from 'axios';
 import "./style.css";
+import AddInventory from '../../AddInventory';
 
 class Inventorypage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { inventory: [],  show: false};
+  state = { inventory: [] };
+   componentDidMount() {
+    axios.get('/inventory/')
+      .then(response => {
+        this.setState({ inventory: response.data });
+        console.log(this.state.inventory);
+      })
   }
 
-  showModal = () => {
-    this.setState({ show: true });
-  };
-
-  hideModal = () => {
-    this.setState({ show: false });
-  };
-
-  render() {
-    return (
-      <main>
-        <h1>React Modal</h1>
-        <button type="button" onClick={this.showModal}>
-          open
-        </button>
-      </main>
-    );
-  }
-
-
-  componentDidMount() {
-    axios.get('/inventory')
+  refreshInventory() {
+    axios.get('/inventory/')
       .then(response => {
         this.setState({ inventory: response.data });
         console.log(this.state.inventory);
@@ -49,6 +34,7 @@ class Inventorypage extends Component {
               <th className="table-head" scope="col">Current</th>
               <th className="table-head" scope="col">Max</th>
               <th className="table-head" scope="col">Min</th>
+              <th className="table-head" scope="col">Notes</th>
             </tr>
           </thead>
           <tbody>
@@ -66,9 +52,8 @@ class Inventorypage extends Component {
             )}
             </tbody>
         </table>
+        <AddInventory refreshInventory = {this.refreshInventory}/> 
         <Row>
-        <button type="button" class="btn btn-light">Add new inventory item</button>
-        <button type="button" class="btn btn-light">Delete an inventory item</button>
         </Row>
       </div>
     )

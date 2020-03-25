@@ -1,14 +1,16 @@
 import React, { Component } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import NavTabs from "./components/Navbar/Navbar.js";
 import Home from "./components/pages/Home/Home.js";
 import Customer from "./components/pages/Customer/Customer.js";
+import CustomerCreate from "./components/pages/Authentication/CustomerCreate"
+import CustomerView from './components/pages/Admin/CustomerView';
 import Inventory from "./components/pages/Inventory/Inventory.js";
 import About from "./components/pages/About/About.js";
 import Contact from "./components/pages/Contact/Contact.js";
 import Admin from "./components/pages/Admin/Admin.js";
 import Footer from "./components/Footer/Footer";
-import CustomerCreate from "./components/pages/Authentication/CustomerCreate"
 import Privacy from "./components/Footer/Privacy";
 import Login from "./components/pages/Login";
 import WorkOrder from "./components/pages/WorkOrder/WorkOrder"
@@ -42,6 +44,9 @@ class HomePage extends Component {
               </Route>
               <Route exact path="/CreateCustomer">
                 <CustomerCreate />
+              </Route>
+              <Route exact path="/Admin/CustomerView">
+                <CustomerView />
               </Route>
               <Route exact path="/HZcqPZc52EPpjNrG3QeePWpzJavvCWJsN6b2UWGQa758dyafQN">
                 <CreateAdmin />

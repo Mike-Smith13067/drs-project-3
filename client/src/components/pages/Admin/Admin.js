@@ -4,19 +4,19 @@ import Card from '../../Card/Card';
 import Row from "../../Row";
 
 const createwo = {
-  title: "Create Work Order",
+  title: <Link to="/Admin/WorkOrderCreate">Create Work Order</Link>,
   image: null,
-  text: <Link to="/Admin/WorkOrderCreate">Create Work Order</Link>
+  text: "Begin a new work order"
 };
 const updatewo = {
-  title: "Update Work Order",
+  title: <Link to="/Admin/WorkOrderUpdate">Update Work Order</Link>,
   image: null,
-  text: <Link to="/Admin/WorkOrderUpdate">Update Work Order</Link>
+  text: "Update an order in process."
 };
 const customerview = {
-  title: "View Customer",
+  title: <Link to="/Admin/CustomerView">View Customer</Link>,
   image: null,
-  text: <Link to="/WorkOrder">View Customer</Link>
+  text: "View current customers"
 };
 class Admin extends Component {
   componentDidMount() { }
@@ -59,9 +59,9 @@ class Admin extends Component {
         <Row>
           <Card text={createwo}>
           </Card>
-          <Card text={customerview}>
-          </Card>
           <Card text={updatewo}>
+          </Card>
+          <Card text={customerview}>
           </Card>
         </Row>
         <Row>

@@ -15,7 +15,7 @@ router.route('/add').post((req, res) => {
     const max = req.body.max;
     const min = req.body.min;
     const notes = req.body.notes;
-    const newInventory = new Inventory({
+    const newInventory = new db.Inventory({
         partnumber,
         name,
         max,
@@ -23,11 +23,11 @@ router.route('/add').post((req, res) => {
         notes,
     });
     newInventory.save()
-        .then(() => res.json(400).json('Error: ' + err));
+        .then((err) => res.json(400).json('Error: ' + err));
 });
 
 //Delete an inventory item
-router.route('/id').delete((req, res) => {
+router.route('/:id').delete((req, res) => {
     Inventory.findById(re.params.id)
         .then(() => res.json('Inventory item deleted.'))
         .catch(err => res.status(400).json('Error: ' + err));

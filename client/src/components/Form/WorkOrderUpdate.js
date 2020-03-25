@@ -4,7 +4,7 @@ import Column from '../Column/Column';
 import Row from '../Row';
 import axios from 'axios';
 
-class WorkorderUpdate extends Component {
+class WorkOrderUpdate extends Component {
     constructor() {
         super();
         this.state = {
@@ -48,4 +48,4 @@ class WorkorderUpdate extends Component {
         )
     }
 }
-export default WorkorderUpdate
+export default WorkOrderUpdate

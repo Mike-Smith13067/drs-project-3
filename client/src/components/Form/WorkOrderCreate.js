@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Row from '../Row';
 import axios from 'axios';
 
+
+
 class Workorder extends Component {
   state = {
     name : "",
@@ -30,6 +32,15 @@ render (){
     <container className="form-container">
       <form className="create-customer">
         <span className="text">New Workorder</span>
+        <Row>
+          <input class="input"
+            type="text"
+            placeholder="Enter customer email"
+            required
+            name="email"
+            onChange={this.handleChange}
+          />
+        </Row>
         <Row>
           <input class="input"
             type="text"
