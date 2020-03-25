@@ -29,7 +29,7 @@ export default class MyForm extends React.Component {
                 <input class="input-box-email" type="email" name="email"/>
                 <hr/>
                 <label className="label">Your Name:</label>
-                <input class="input-box-name"type="text" name=""></input>
+                <input class="input-box-name"type="text" name="text"></input>
                 <hr/>
                 <label className="label">Message & Contact Info:</label>
                 <input class="input-box-msg" type="text" name="message" />
