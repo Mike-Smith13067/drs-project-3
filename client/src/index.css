@@ -39,7 +39,8 @@ body {
   padding-top: 1em;
 } */
 
-.slide {
+.slider {
+  white-space: pre-wrap;
   /* position: fixed;
   /* padding-top: 5em;
   padding-right: 10em;
@@ -62,7 +63,7 @@ body {
   top: 70px;
   right: 0px;
   opacity: 1;
-  width: 400px;
+  width: 500px;
   background-color: rgba(255, 255, 255, 0.8);
   color: #333;
   padding: 20px;
@@ -81,11 +82,11 @@ p {
   margin-bottom: 10px;
 }*/
 
-.current .content {
+/* .current .content {
   opacity: 0;
   transform: translateX(600px);
   transition: all 0.7s ease-in-out 0.3s;
-}
+} */
 
 /* .current .content {
   transform: translateY(-300px);
