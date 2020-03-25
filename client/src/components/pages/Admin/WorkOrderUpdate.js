@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import WorkOrderUpdate from '../../Footer/Footer';
+import WorkOrderUpdate from '../../Form/WorkOrderUpdate';
 import Column from '../../Column/Column';
 import Row from '../../Row'
 

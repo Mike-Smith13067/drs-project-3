@@ -84,11 +84,11 @@ class Navtabs extends Component {
                                 </NavLink>
                             </NavItem>
 
-                            <NavItem>
+                            {this.state.isAdmin ? <NavItem>
                                 <NavLink href="/Inventory">
                                     Inventory
                                 </NavLink>
-                            </NavItem>
+                            </NavItem> : <div></div>}
 
                             
 

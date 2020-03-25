@@ -1,0 +1,16 @@
+.table {
+    position: center;
+    text-align: center;
+    width: 100%;
+    background-color: grey;
+    border-color: black;
+}
+
+.table-body {
+    text-align: center;
+    background-color:  lightgrey;
+    color: black;
+}
+td {
+    width: 10%;
+}
