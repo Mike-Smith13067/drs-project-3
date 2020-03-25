@@ -1,2 +1,40 @@
+.loginContainer{
+    width: 400px; 
+    height: 500px; 
+    margin: 100px auto;
+    background: linear-gradient( #2F197F 10%, #FF7D00 100%);
+    border-radius: 25px;
+}
 
-
+#loginForm{
+    position: absolute;
+    top: 40%;
+    left: 43%;
+  font-size: 20px;
+  text-align: center; 
+ 
+}
+.row label{
+justify-content: center; 
+text-align: center; 
+  color: white; 
+}
+.login-email {
+    width: 350px; 
+  
+}
+.login-password {
+    width: 350px; 
+}
+.row button{
+  border-radius: 25px;
+  justify-content: center; 
+  width: 150px;
+  height: 40px;
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 700;
+  background: #2F197F; 
+  border: 0px;
+  cursor: pointer;
+}

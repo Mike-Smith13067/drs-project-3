@@ -1,86 +1,58 @@
-body {
-    background: hsla(210, 20%, 90%, 1);
-    padding: 2em 0;
-    line-height: 1.6;
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    align-items: center;
-    font-family: 'Open Sans', sans-serif;
-  }
+.contactContainer{
+  width: 400px; 
+  height: 500px; 
+  margin: 100px auto;
+  background: linear-gradient( #2F197F 10%, #FF7D00 100%);
+  border-radius: 25px;
+}
+
+#contactForm {
+font-size: 15px; 
+
+}
+.contact-label{
+justify-content: left; 
+text-align: left; 
+color: white; 
+max-width: 350px; 
+
+
+}
+.contact-h1 {
+  color: white; 
+  padding: 5px; 
+}
+.input-box-name  {
+  position: absolute; 
+  float: left;
+  left: 36%;
+  max-width: 350px; 
+ margin-top: 25px; 
   
-  h1, h2, h3, h5 {
-    margin: 0;
-  }
+}
+.input-box-email {
+  position:absolute; 
+  float: left;
+  left: 36%;
+  margin-top: 20px; 
+  max-width: 350px; 
+
   
-  .header {
-    text-align: center;
-    margin-bottom: 60px;
-  }
-  
-  .header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3em;
-    margin-bottom: 0.2em;
-    line-height: 1.2;
-    color: #222
-  }
-  
-  .header h3 {
-    font-weight: 400;
-    color: #555;
-    width: 30em;
-  }
-  
-  .cards {
-    display: flex;
-    align-items: flex-start;
-      justify-content: center;
-  }
-  
-  .card {
-    background: #fff;
-    width: 24em;
-    border-radius: 0.6em;
-    margin: 1em;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 13px 27px -5px hsla(240, 30.1%, 28%, 0.25), 0 8px 16px -8px hsla(0, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
-    transition: all ease 200ms;
-  }
-  
-  .card:hover {
-    transform: scale(1.03);
-  }
-  
-  .card img {
-    width: 100%;
-    object-fit: cover;
-  }
-  
-  .card h2 {
-    color: #222;
-    margin-top: -0.2em;
-    line-height: 1.4;
-    font-size: 1.3em;
-    font-weight: 500;
-    font-family: 'Montserrat', sans-serif;
-    transition: all ease-in 100ms;
-  }
-  
-  .card p {
-    color: #777;
-  }
-  
-  .card h5 {
-    color: #bbb;
-    font-weight: 700;
-    font-size: 0.7em;
-    letter-spacing: 0.04em;
-    margin: 1.4em 0 0 0;
-    text-transform: uppercase;
-  }
-  
-  .card-body {
-    padding: 1.2em;
-  }
+}
+.input-box-msg{
+  max-width: 350px; 
+
+}
+.container button{
+border-radius: 25px;
+justify-content: center; 
+float: right; 
+width: 150px;
+height: 40px;
+font-size: 1.3rem;
+color: white;
+font-weight: 700;
+background: #2F197F; 
+border: 0px;
+cursor: pointer;
+}

@@ -3,6 +3,7 @@ import { Button, Form, FormGroup, Label, Input, Fade, Col, Container, Row  } fro
 import _ from 'lodash';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './style.css'
  
 const validationMethods =  {
     required : (field, value) => {
@@ -108,10 +109,11 @@ export default class Login extends Component {
  
     render() {
         return (
+            <div class= "loginContainer">
             <Container>
                 <Row>
-                <Col sm="12" md={{ size: 6, offset: 3 }}>
-                    <h1 className="login-h1">Login</h1>
+                <Col>
+
                 <Form id="loginForm" method="post" onSubmit={this.login}>
                     <FormGroup>
                         <Label className="login-label-name" for="email">Email</Label>
@@ -139,11 +141,14 @@ export default class Login extends Component {
                         />
                         <FromValidationError field={this.state.errors.password} />
                     </FormGroup>
+                    <div class="loginButton">
                     <Button color="primary" size="sm">Login</Button>
+                    </div>
                 </Form>
                 </Col>
                 </Row>
             </Container>
+            </div>
         );
     }
 }
