@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Row from '../Row';
 import axios from 'axios';
+import { Button, Container } from 'reactstrap';
+
 
 class Form extends Component {
   state = {
@@ -27,9 +29,9 @@ class Form extends Component {
   }
 render (){
   return (
-    <container className="form-container">
+    <Container>
       <form className="create-customer">
-        <span className="text">New Customer Registration</span>
+        <span className="text">Create New Customer Account</span>
         <Row>
           <input class="input-name"
             type="text"
@@ -102,11 +104,12 @@ render (){
             onChange={this.handleChange}
           />
         </Row>
+        <hr />
         <Row>
-          <button className="btn-primary" onClick = {this.handleSubmit}>Submit new account.</button>
+          <Button color="primary" size="sm" onClick = {this.handleSubmit}>Submit new account</Button>
         </Row>
       </form>
-    </container>
+    </Container>
 
   );
 }
