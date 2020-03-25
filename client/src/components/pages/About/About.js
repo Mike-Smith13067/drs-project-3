@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import Card from "../../Card/Card";
 import Row from "../../Row";
-import './style.css'
+
 
 const Image = require("./images/churchandsnook.jpg")
 const missionStatement = {
@@ -15,7 +15,7 @@ const bio = {
 };
 const casey = {
     title: "Meet Casey!",
-    text: "Our Official Head of Security and Customer Greeter", 
+    text: "Official Head of Security and Customer Greeter", 
     image: <img width="100%" height="260em" src={require("../../../assets/images/casey.png")} />,
 };
 const churchSnook = {

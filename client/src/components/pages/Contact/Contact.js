@@ -4,6 +4,7 @@
 
 import React from "react";
 import { Button, Container } from 'reactstrap';
+import './style.css'
 
 export default class MyForm extends React.Component {
     constructor(props) {
@@ -17,29 +18,32 @@ export default class MyForm extends React.Component {
     render() {
         const {status} = this.state;
         return (
+            <div class ="contactContainer">
             <Container>
-            <form action="https://formspree.io/mjvoaqoq" method="POST" enctype="multipart/form-data">
+            <form id= "contactForm" action="https://formspree.io/mjvoaqoq" method="POST" enctype="multipart/form-data">
                 {/* <!-- add your custom form HTML here --> */}
-                <h1 className="contact-h1">Contact/General Inquries</h1>
+                <h1 className="contact-h1">Contact & General Inquries</h1>
                 <container/>
                 <row/>
                 <col-sm-12/>
                 <hr/>
-                <label className="label">Your Email:</label>
+                <label className="contact-label">Your Email:</label>
                 <input class="input-box-email" type="email" name="email"/>
                 <hr/>
-                <label className="label">Your Name:</label>
+                <label className="contact-label">Your Name:</label>
                 <input class="input-box-name"type="text" name="text"></input>
                 <hr/>
-                <label className="label">Message & Contact Info:</label>
+                <label className="contact-label">Message & Contact Info:</label>
                 <input class="input-box-msg" type="text" name="message" />
                 <hr/> {
-                status === "SUCCESS" ? <p>Thanks!</p> : <Button color="primary" size="sm" type="submit" value="Submit">Submit</Button>
+                status === "SUCCESS" ? <p>Thanks!</p> :
+                <Button class = "contact-button" size="sm">Submit</Button>
             }
                 {
                 status === "ERROR" && <p>Ooops! There was an error.</p>
             } </form>
             </Container>
+            </div>
         );
 
     }
