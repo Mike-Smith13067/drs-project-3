@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from 'axios';
 import "./style.css";
 import { Link } from 'react-router-dom';
+import { Button } from 'reactstrap';
 
 
 class Customerpage extends Component {
@@ -36,7 +37,7 @@ class Customerpage extends Component {
             {
               this.state.customer.map((customeritem) =>
                 <tr className="table-body" key={customeritem._id}>
-                  <button type="button" class="btn btn-primary"></button>
+                  <Button color="primary" size="sm" class="btn"></Button>
                   <td>{customeritem.name}</td>
                   <td>{customeritem.make}</td>
                   <td>{customeritem.model}</td>

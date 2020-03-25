@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Row from '../Row';
 import axios from 'axios';
+import { Button, Container } from 'reactstrap';
 
 
 
@@ -29,11 +30,11 @@ class Workorder extends Component {
   }
 render (){
   return (
-    <container className="form-container">
+    <Container>
       <form className="create-customer">
-        <span className="text">New Workorder</span>
+        <span className="newWorkorder">New Workorder</span>
         <Row>
-          <input class="input"
+          <input class="newWorkorder-email"
             type="text"
             placeholder="Enter customer email"
             required
@@ -42,7 +43,7 @@ render (){
           />
         </Row>
         <Row>
-          <input class="input"
+          <input className="newWorkorder-item"
             type="text"
             placeholder="Enter item type (Part/Time)"
             required
@@ -51,16 +52,16 @@ render (){
           />
         </Row>
         <Row>
-          <input
+          <input className="newWorkorder-part-desc"
             type="text"
-            placeholder="Enter part description"
+            placeholder="newWorkorder-part-desc"
             required
             name="description"
             onChange={this.handleChange}
           />
         </Row>
         <Row>
-          <input
+          <input className="newWorkorder-part-num"
             type="text"
             placeholder="Enter a partnumber"
             required
@@ -69,7 +70,7 @@ render (){
           />
         </Row>
         <Row>
-          <input
+          <input className="newWorkorder-part-qty"
             type="text"
             placeholder="Enter quantity"
             required
@@ -78,7 +79,7 @@ render (){
           />
         </Row>
         <Row>
-          <input
+          <input className="newWorkorder-price"
             type="text"
             placeholder="Enter price"
             required
@@ -87,7 +88,7 @@ render (){
           />
         </Row>
         <Row>
-          <input
+          <input className="newWorkorder-hours"
             type="text"
             placeholder="Enter hour(s)"
             required
@@ -96,7 +97,7 @@ render (){
           />
         </Row>
         <Row>
-          <input
+          <input className="newWorkorder-hour-rate"
             type="text"
             placeholder="Enter hourly rate"
             required
@@ -105,7 +106,7 @@ render (){
           />
         </Row>
         <Row>
-          <input
+          <input className="newWorkorder-comments"
             type="text"
             placeholder="Enter any comments, observations or notes"
             required
@@ -113,11 +114,12 @@ render (){
             onChange={this.handleChange}
           />
         </Row>
+        <hr />
         <Row>
-          <button onClick = {this.handleSubmit}>Submit new workorder.</button>
+        <Button color="primary" size="sm" onClick = {this.handleSubmit}>Submit new workorder.</Button>
         </Row>
       </form>
-    </container>
+    </Container>
 
   );
 }

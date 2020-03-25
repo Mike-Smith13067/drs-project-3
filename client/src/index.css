@@ -39,7 +39,8 @@ body {
   padding-top: 1em;
 } */
 
-.slide {
+.slider {
+  white-space: pre-wrap;
   /* position: fixed;
   /* padding-top: 5em;
   padding-right: 10em;
@@ -62,7 +63,7 @@ body {
   top: 70px;
   right: 0px;
   opacity: 1;
-  width: 400px;
+  width: 500px;
   background-color: rgba(255, 255, 255, 0.8);
   color: #333;
   padding: 20px;
@@ -81,11 +82,11 @@ p {
   margin-bottom: 10px;
 }*/
 
-.current .content {
+/* .current .content {
   opacity: 0;
   transform: translateX(600px);
   transition: all 0.7s ease-in-out 0.3s;
-}
+} */
 
 /* .current .content {
   transform: translateY(-300px);
@@ -155,6 +156,104 @@ p {
   font-size: 1em;
 }
 
+/* New Workorder | Workorder Update */
+
+.newWorkorder {
+  font-size: 1em;
+  color: black;
+  margin: 1em 0em 0em -1em;
+}
+
+.Workorder-email {
+  border-width: 3px;
+  margin: .5em 0em 0em 4em;
+  height: 2em;
+  width: 25em;
+  font-size: .75em;
+  border-radius: .5em;
+}
+
+.newWorkorder-email {
+  border-width: 3px;
+  margin: .5em 0em 0em 4em;
+  height: 2em;
+  width: 25em;
+  font-size: .75em;
+  border-radius: .5em;
+}
+.newWorkorder-item {
+  border-width: 3px;
+  margin: .5em 0em 0em 4em;
+  height: 2em;
+  width: 25em;
+  font-size: .75em;
+  border-radius: .5em;
+}
+
+.newWorkorder-part-desc {
+  border-width: 3px;
+  margin: .5em 0em 0em 4em;
+  height: 2em;
+  width: 25em;
+  font-size: .75em;
+  border-radius: .5em;
+}
+
+.newWorkorder-part-num {
+  border-width: 3px;
+  margin: .5em 0em 0em 4em;
+  height: 2em;
+  width: 25em;
+  font-size: .75em;
+  border-radius: .5em;
+}
+
+.newWorkorder-part-qty {
+  border-width: 3px;
+  margin: .5em 0em 0em 4em;
+  height: 2em;
+  width: 25em;
+  font-size: .75em;
+  border-radius: .5em;
+}
+
+.newWorkorder-price {
+  border-width: 3px;
+  margin: .5em 0em 0em 4em;
+  height: 2em;
+  width: 25em;
+  font-size: .75em;
+  border-radius: .5em;
+}
+
+.newWorkorder-hours {
+  border-width: 3px;
+  margin: .5em 0em 0em 4em;
+  height: 2em;
+  width: 25em;
+  font-size: .75em;
+  border-radius: .5em;
+}
+
+.newWorkorder-hour-rate {
+  border-width: 3px;
+  margin: .5em 0em 0em 4em;
+  height: 2em;
+  width: 25em;
+  font-size: .75em;
+  border-radius: .5em;
+}
+
+.newWorkorder-comments {
+  border-width: 3px;
+  margin: .5em 0em 0em 4em;
+  height: 2em;
+  width: 25em;
+  font-size: .75em;
+  border-radius: .5em;
+}
+
+
 /* Create Account */
 .create-customer {
     font-size: 1.5em;
@@ -215,6 +314,11 @@ p {
   border-radius: .5em;
   /* text-overflow: clip;
   word-break: normal; */
+}
+
+.btn-primary {
+  border-radius: 45%;
+  border: #fff;
 }
 
 

@@ -135,7 +135,7 @@ export default class AdminLogin extends Component {
                         />
                         <FromValidationError field={this.state.errors.password} />
                     </FormGroup>
-                    <Button>login</Button>
+                    <Button>Login</Button>
                 </Form>
             </div>
         );
