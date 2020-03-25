@@ -3,6 +3,7 @@ import Form from './Form';
 import Column from '../Column/Column';
 import Row from '../Row';
 import axios from 'axios';
+import { Button, Container } from 'reactstrap';
 
 class WorkOrderUpdate extends Component {
     constructor() {
@@ -28,11 +29,11 @@ class WorkOrderUpdate extends Component {
     render() {
         return (
 
-            <container className="form-container">
+            <Container>
                 <form className="create-customer">
                     <span className="text">Update Workorder</span>
                     <Row>
-                        <input class="input"
+                        <input class="Workorder-email"
                             type="text"
                             placeholder="Enter the customer's email"
                             required
@@ -41,9 +42,12 @@ class WorkOrderUpdate extends Component {
                             value={this.state.email}
                         />
                     </Row>
+                    <hr />
+                <Row>
+                <Button color="primary" size="sm" onClick = {this.handleSubmit}>Update customer workorder.</Button>
+                </Row>
                 </form>
-                <button onClick = {this.handleSubmit}>Update customer workorder.</button>
-            </container>
+            </Container>
 
         )
     }
