@@ -312,6 +312,8 @@ p {
   width: 50em;
   font-size: 1em;
   border-radius: .5em;
+  margin: .5em 1em 1em 1.87em;
+
   /* text-overflow: clip;
   word-break: normal; */
 }
