@@ -13,7 +13,10 @@ app.use(require('express-session')({secret: 'keyboard-cat', resave: false, saveU
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
-app.use(express.static("public"))
+
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, "client/public")));
+}
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 
