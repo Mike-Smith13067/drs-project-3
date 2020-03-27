@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import {
     Collapse,
     Navbar,
@@ -47,46 +48,40 @@ class Navtabs extends Component {
                         }
                         navbar>
                         <Nav className="ml-auto" navbar>
-                            {/* <NavItem>
-                                <NavLink href="/">
-                                    Home
-                                </NavLink>
-                            </NavItem> */}
                             {this.state.isAdmin ? <NavItem>
-                                <NavLink href="/Admin">
-                                    Admin
+                                <NavLink>
+                                    <Link to="/Admin">Admin</Link>
                                 </NavLink>
-                            </NavItem> : <NavItem><NavLink href="/">Home</NavLink></NavItem>}
+                            </NavItem> : <NavItem><NavLink><Link to="/">Home</Link></NavLink></NavItem>}
                             {this.state.isAuthenticated ? <NavItem>
-                                <NavLink href="/Customer">
-                                    Customer
+                                <NavLink>
+                                <Link to="/Customer">Customer</Link>
                                 </NavLink>
                             </NavItem> : <div></div>}
                             <NavItem>
-                                <NavLink href="/About">
-                                    About
+                                <NavLink>
+                                    <Link to="/About">About</Link>
                                 </NavLink>
                             </NavItem>
                             
                             <NavItem>
-                                <NavLink href="/Login">
-                                    Login
+                                <NavLink>
+                                <Link to="/Login">Login</Link>
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/CreateCustomer">
-                                    Create Account
+                                <NavLink><Link to="/CreateCustom">Create Account</Link>
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/Contact">
-                                    Contact
+                                <NavLink>
+                                    <Link to="/Contact">Contact</Link>
                                 </NavLink>
                             </NavItem>
 
                             {this.state.isAdmin ? <NavItem>
-                                <NavLink href="/Inventory">
-                                    Inventory
+                                <NavLink>
+                                <Link to="/Inventory">Inventory</Link>
                                 </NavLink>
                             </NavItem> : <div></div>}
 
