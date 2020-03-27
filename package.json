@@ -11,7 +11,7 @@
     "seed": "node scripts/customerDB.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
